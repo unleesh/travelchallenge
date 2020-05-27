@@ -1,4 +1,5 @@
 import React from 'react';
+import Choice from './Choice';
 import styled from 'styled-components';
 import { mockData } from '../mockData';
 
@@ -16,36 +17,64 @@ const Question = ({
 }) => {
 	const { question, choices } = mockData[currentPage];
 	console.log(currentPage, isSelected, btnColor);
+	const onClickChoice = () => {
+		setBtnState();
+		setTimeout(() => {
+			setPageCount();
+		}, 2000);
+	};
 	return (
-		<div>
-			<div>Question {currentPage}</div>
-			<div>{question}</div>
-			<ul>
+		<QuestionPageWrapper>
+			{/* <div>Question {currentPage}</div> */}
+			<QuestionWrapper>{question}</QuestionWrapper>
+			<div>
 				{choices.map((choice) => (
-					<li key={`${currentPage}_${choice}`} onClick={() => setBtnState()}>
-						{currentPage}_{choice}
-					</li>
+					// <ChoiceWrapper
+					// 	key={`${currentPage}_${choice}`}
+					// 	onClick={() => click()}
+					// 	btnColor={btnColor}>
+					// 	{currentPage}_{choice}
+					// </ChoiceWrapper>
+					<Choice
+						key={`${currentPage}_${choice}`}
+						click={onClickChoice}
+						currentPage={currentPage}
+						btnColor={btnColor}
+						choice={choice}
+					/>
 				))}
-			</ul>
-			<Button
+			</div>
+			{/* <Button
 				disabled={isSelected ? false : true}
 				btnColor={btnColor}
 				onClick={() => setPageCount()}>
 				NEXT
-			</Button>
-		</div>
+			</Button> */}
+		</QuestionPageWrapper>
 	);
 };
 
-const Button = styled.button`
-	padding: 10px 15px;
-	margin: 0 5px;
-	border: none;
-	border-radius: 5px;
-	// need to be fixed to change color when the btn is clicked
-	background-color: ${(props) => props.btnColor || 'blue'};
-	color: #ffffff;
-	font-size: 15pt;
+const QuestionPageWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 `;
+
+const QuestionWrapper = styled.div`
+	align-self: center;
+	position: absolute;
+	top: 3em;
+`;
+
+// const Button = styled.button`
+// 	padding: 10px 15px;
+// 	margin: 0 5px;
+// 	border: none;
+// 	border-radius: 5px;
+// 	// need to be fixed to change color when the btn is clicked
+// 	background-color: ${(props) => props.btnColor || 'blue'};
+// 	color: #ffffff;
+// 	font-size: 15pt;
+// `;
 
 export default Question;
