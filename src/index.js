@@ -12,8 +12,6 @@ const GlobalStyle = createGlobalStyle`
     border: none;
 		cursor: default;
 		color: rgba(255,255,255,1);
-		margin-left: 10px;
-		margin-bottom: 10px;
 		font-size: 25px;
   }
 `;

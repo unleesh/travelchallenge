@@ -14,4 +14,7 @@ export const CardContainer = styled.div`
 	overflow: visible;
 	border: 1px solid black;
 	background-color: rgba(29, 188, 165, 1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `;

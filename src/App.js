@@ -16,8 +16,8 @@ function App() {
 			<AppContainer className='App'>
 				<CardContainer>
 					<PageProvider>
-						<IntroPage />
-						<IntroLoadingPage />
+						{/* <IntroPage />
+						<IntroLoadingPage /> */}
 						<QuestionsPage />
 						<VerificationPage />
 						<ResultLoadingPage />
