@@ -10,26 +10,45 @@ const PageProvider = ({ children }) => {
 	const [isSelected, setIsSelected] = useState(false);
 
 	// sets the color of button when it's clicked.
-	const [btnColor, setBtnColor] = useState('#95a5a6');
+	const [btnColor, setBtnColor] = useState('rgba(29, 188, 165, 1)');
+
+	// sets user's countries list when country is clicked
+	const [selectedCountries, setSelectedCountries] = useState([]);
+
+	// ----------- setPageCount 와 setBtnState merge 필요
 
 	// called when the button is clicked
 	const setPageCount = () => {
-		setCurrentPage(currentPage + 1);
 		setIsSelected(false);
-		setBtnColor('#95a5a6');
+		setBtnColor('rgba(29, 188, 165, 1)');
+		setTimeout(() => {
+			setCurrentPage(currentPage + 1);
+		}, 2000);
 		// console.log(currentPage, isSelected);
 	};
 
 	// Button color changes after the click on each choices
 	const setBtnState = () => {
 		if (isSelected) {
-			setBtnColor('#95a5a6');
+			setBtnColor('rgba(29, 188, 165, 1)');
 			setIsSelected(false);
 		} else {
-			setBtnColor('#16a085');
+			setBtnColor('rgba(249, 180, 56, 1)');
 			setIsSelected(true);
 		}
 		// console.log(isSelected);
+	};
+
+	// -----------------------
+
+	const setCountryList = (selected, name) => {
+		if (selected) {
+			setSelectedCountries(
+				selectedCountries.filter((country) => country !== name),
+			);
+		} else {
+			setSelectedCountries([...selectedCountries, name]);
+		}
 	};
 
 	return (
@@ -40,6 +59,8 @@ const PageProvider = ({ children }) => {
 				isSelected,
 				setBtnState,
 				btnColor,
+				selectedCountries,
+				setCountryList,
 			}}>
 			{children}
 		</PageContext.Provider>
