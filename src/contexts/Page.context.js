@@ -1,10 +1,14 @@
 import { createContext } from 'react';
 
 const PageContext = createContext({
-	currentPage: 0,
+	currentPage: 1,
 	isSelected: false,
+	selectedCountries: [],
+	selectedChoices: [],
+	userData: {},
 	nextPage: () => {},
 	selectChoice: () => {},
+	selectCountry: () => {},
 });
 
 export default PageContext;
