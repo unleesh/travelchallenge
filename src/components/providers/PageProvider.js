@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer, useEffect, useCallback } from 'react';
 import PageContext from '../../contexts/Page.context';
 
 const PageProvider = ({ children }) => {
@@ -7,39 +7,38 @@ const PageProvider = ({ children }) => {
 	const [currentPage, setCurrentPage] = useState(1);
 
 	// sets button to disabled when nothing has selected.
-	const [isSelected, setIsSelected] = useState(false);
+	// const [isSelected, setIsSelected] = useState(false);
 
-	// sets the color of button when it's clicked.
-	const [btnColor, setBtnColor] = useState('rgba(29, 188, 165, 1)');
+	// // sets the color of button when it's clicked.
+	// const [btnColor, setBtnColor] = useState('rgba(29, 188, 165, 1)');
 
 	// sets user's countries list when country is clicked
 	const [selectedCountries, setSelectedCountries] = useState([]);
 
-	// ----------- setPageCount 와 setBtnState merge 필요
+	// set user's choices of questions when clicked
+	const [selectedChoices, setSelectedChioces] = useState([]);
+
+	// use reducer to set mutiple inputs -> add dropdown values later
+	const [userInput, setUserInput] = useReducer(
+		(state, newState) => ({ ...state, ...newState }),
+		{
+			username: '',
+			email: '',
+		},
+	);
 
 	// called when the button is clicked
 	const setPageCount = () => {
-		setIsSelected(false);
-		setBtnColor('rgba(29, 188, 165, 1)');
 		setTimeout(() => {
 			setCurrentPage(currentPage + 1);
-		}, 2000);
+		}, 500);
 		// console.log(currentPage, isSelected);
 	};
 
 	// Button color changes after the click on each choices
-	const setBtnState = () => {
-		if (isSelected) {
-			setBtnColor('rgba(29, 188, 165, 1)');
-			setIsSelected(false);
-		} else {
-			setBtnColor('rgba(249, 180, 56, 1)');
-			setIsSelected(true);
-		}
-		// console.log(isSelected);
+	const addUserChoice = (choice) => {
+		setSelectedChioces([...selectedChoices, choice]);
 	};
-
-	// -----------------------
 
 	const setCountryList = (selected, name) => {
 		if (selected) {
@@ -51,16 +50,28 @@ const PageProvider = ({ children }) => {
 		}
 	};
 
+	// update inputs with useReducer
+	const onUserInputChange = (e) => {
+		const name = e.target.name;
+		const newValue = e.target.value;
+		setUserInput({ [name]: newValue });
+	};
+
+	useEffect(() => {
+		console.log('마운트 될 때만 실행됩니다.');
+	}, []);
+
 	return (
 		<PageContext.Provider
 			value={{
 				currentPage,
 				setPageCount,
-				isSelected,
-				setBtnState,
-				btnColor,
 				selectedCountries,
 				setCountryList,
+				selectedChoices,
+				addUserChoice,
+				userInput,
+				onUserInputChange,
 			}}>
 			{children}
 		</PageContext.Provider>
