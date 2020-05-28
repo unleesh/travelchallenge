@@ -8,48 +8,27 @@ import { mockData } from '../mockData';
  ** 해당 질문에 속한 선택지들을 map
  ** 선택을 해야 isSelected로 인해 버튼 클릭 가능
  */
-const Question = ({
-	currentPage,
-	setPageCount,
-	isSelected,
-	setBtnState,
-	btnColor,
-}) => {
+const Question = ({ currentPage, selectedChoices }) => {
 	const { question, choices } = mockData[currentPage];
-	console.log(currentPage, isSelected, btnColor);
-	const onClickChoice = () => {
-		setBtnState();
-		setTimeout(() => {
-			setPageCount();
-		}, 2000);
-	};
+	// console.log(
+	// 	`currentPage: ${currentPage}, selected choices: ${selectedChoices}`,
+	// );
+	console.log(selectedChoices);
 	return (
 		<QuestionPageWrapper>
 			{/* <div>Question {currentPage}</div> */}
-			<QuestionWrapper>{question}</QuestionWrapper>
+			<QuestionWrapper>
+				{currentPage}. {question}
+			</QuestionWrapper>
 			<div>
 				{choices.map((choice) => (
-					// <ChoiceWrapper
-					// 	key={`${currentPage}_${choice}`}
-					// 	onClick={() => click()}
-					// 	btnColor={btnColor}>
-					// 	{currentPage}_{choice}
-					// </ChoiceWrapper>
 					<Choice
 						key={`${currentPage}_${choice}`}
-						click={onClickChoice}
 						currentPage={currentPage}
-						btnColor={btnColor}
 						choice={choice}
 					/>
 				))}
 			</div>
-			{/* <Button
-				disabled={isSelected ? false : true}
-				btnColor={btnColor}
-				onClick={() => setPageCount()}>
-				NEXT
-			</Button> */}
 		</QuestionPageWrapper>
 	);
 };

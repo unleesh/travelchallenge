@@ -3,7 +3,7 @@ import PageContext from '../contexts/Page.context';
 import Question from '../components/Question';
 import CountrySelection from '../components/CountrySelection';
 
-const Questions = () => {
+const QuestionsPage = () => {
 	const props = useContext(PageContext);
 	// Switch page to CountrySelection after Questions
 	return props.currentPage === 4 ? (
@@ -13,4 +13,4 @@ const Questions = () => {
 	);
 };
 
-export default Questions;
+export default QuestionsPage;
