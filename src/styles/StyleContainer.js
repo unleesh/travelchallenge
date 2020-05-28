@@ -17,4 +17,5 @@ export const CardContainer = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow-y: scroll;
 `;
