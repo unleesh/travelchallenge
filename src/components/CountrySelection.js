@@ -3,7 +3,7 @@ import Country from './Country';
 import { mockCountries } from '../mockData';
 import styled from 'styled-components';
 
-const CountrySelection = ({ selectedCountries }) => {
+const CountrySelection = ({ selectedCountries, setPageCount }) => {
 	console.log(selectedCountries);
 	return (
 		<CountrySelectionWrapper>
@@ -17,7 +17,7 @@ const CountrySelection = ({ selectedCountries }) => {
 					<Country key={mockCountry.abvName} {...mockCountry} />
 				))}
 			</CountriesWrapper>
-			<ButtonWrapper>Send</ButtonWrapper>
+			<ButtonWrapper onClick={() => setPageCount()}>Send</ButtonWrapper>
 		</CountrySelectionWrapper>
 	);
 };
@@ -26,6 +26,7 @@ const CountrySelectionWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	text-align: center;
+	margin-top: auto;
 `;
 
 const CountriesWrapper = styled.div`

@@ -60,8 +60,8 @@ const OuterImgWrapper = styled.div`
 			  `
 			: ''}  
 	position: relative;
-	width: 20vw;
-	height: 20vw;
+	width: 3em;
+	height: 3em;
 	overflow: hidden;
 	margin-bottom: 3px;
 `;
