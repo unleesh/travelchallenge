@@ -21,25 +21,29 @@ const emailOptions = [
 const Verification = () => {
 	const [genderOption, setGenderOption] = useState(null);
 	const [emailOption, setEmailOption] = useState(null);
-	const { userInput, onUserInputChange } = useContext(PageContext);
+	const {
+		userInput,
+		onUserInputChange,
+		setPageCount,
+		setCurrentDate,
+	} = useContext(PageContext);
 	const { username, email } = userInput;
-	const handleOptionChange = (selectedOption) => {
-		if (selectedOption.value[0] !== '@') {
-			setGenderOption(selectedOption);
-		} else {
-			setEmailOption(selectedOption);
-		}
-		console.log(`Option selected:`, selectedOption);
-	};
-	useEffect(() => {
-		console.log(genderOption, emailOption);
-	}, [genderOption, emailOption, setGenderOption, setEmailOption]);
-
+	// const handleOptionChange = (selectedOption) => {
+	// 	if (selectedOption.value[0] !== '@') {
+	// 		setGenderOption(selectedOption);
+	// 	} else {
+	// 		setEmailOption(selectedOption);
+	// 	}
+	// 	console.log(`Option selected:`, selectedOption);
+	// };
+	console.log(userInput);
 	return (
 		<div>
 			<form
-				onSubmit={() => {
-					return;
+				onSubmit={(e) => {
+					e.preventDefault();
+					setCurrentDate();
+					setPageCount();
 				}}>
 				<label>
 					<TextWrapper>Passenger</TextWrapper>
@@ -48,7 +52,7 @@ const Verification = () => {
 							placeholder='Select'
 							styles={genderOptionStyles}
 							value={genderOption}
-							onChange={handleOptionChange}
+							onChange={(e) => onUserInputChange(e, 'prefix')}
 							options={genderOptions}
 						/>
 						<InputWrapper
@@ -70,9 +74,8 @@ const Verification = () => {
 						/>
 						<CreatableSelect
 							styles={emailOptionStyles}
-							isClearable
 							value={emailOption}
-							onChange={handleOptionChange}
+							onChange={(e) => onUserInputChange(e, 'address')}
 							options={emailOptions}
 						/>
 					</SelectWrapper>
@@ -85,6 +88,8 @@ const Verification = () => {
 
 const TextWrapper = styled.div`
 	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
 `;
 
 const SelectWrapper = styled.div`

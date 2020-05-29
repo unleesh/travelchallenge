@@ -1,10 +1,11 @@
-import React, { useState, useReducer, useEffect, useCallback } from 'react';
+import React, { useState, useReducer, useEffect } from 'react';
 import PageContext from '../../contexts/Page.context';
+import moment from 'moment';
 
 const PageProvider = ({ children }) => {
 	// Define state & setState with hook
 	// counts currentPage to show questions by each pages
-	const [currentPage, setCurrentPage] = useState(1);
+	const [currentPage, setCurrentPage] = useState(15);
 
 	// sets button to disabled when nothing has selected.
 	// const [isSelected, setIsSelected] = useState(false);
@@ -22,8 +23,25 @@ const PageProvider = ({ children }) => {
 	const [userInput, setUserInput] = useReducer(
 		(state, newState) => ({ ...state, ...newState }),
 		{
+			prefix: '',
 			username: '',
 			email: '',
+			address: '',
+		},
+	);
+
+	// time string for ticket
+	const [date, setDate] = useState('');
+
+	// result for user - img(cityText, countryText, homeFlag, countryFlag, landmark)
+	const [result, setResult] = useReducer(
+		(state, newState) => ({ ...state, ...newState }),
+		{
+			cityText: '',
+			countryText: '',
+			fromFlag: '',
+			toFlag: '',
+			landmark: '',
 		},
 	);
 
@@ -31,7 +49,7 @@ const PageProvider = ({ children }) => {
 	const setPageCount = () => {
 		setTimeout(() => {
 			setCurrentPage(currentPage + 1);
-		}, 500);
+		}, 100);
 		// console.log(currentPage, isSelected);
 	};
 
@@ -51,10 +69,36 @@ const PageProvider = ({ children }) => {
 	};
 
 	// update inputs with useReducer
-	const onUserInputChange = (e) => {
-		const name = e.target.name;
-		const newValue = e.target.value;
+	const onUserInputChange = (e, prefix = null) => {
+		let name;
+		let newValue;
+		if (!prefix) {
+			//input
+			name = e.target.name;
+			newValue = e.target.value;
+		} else {
+			// dropdown
+			name = prefix;
+			newValue = e.value === 'None' ? '' : e.value;
+		}
+		console.log('name', name);
 		setUserInput({ [name]: newValue });
+	};
+
+	const setCurrentDate = () => {
+		const date = moment().format('DD MMM YYYY');
+		console.log(date);
+		setDate(date);
+	};
+
+	/**
+	 *	1. selectedChoices 에 따른 성향 계산
+	 *  2. 랜덤한 나라 선택 Math.random()
+	 */
+	const nameWithPrefix = `${userInput.prefix} ${userInput.name}`;
+
+	const updateResult = () => {
+		const name = userInput.prefix + userInput.name;
 	};
 
 	useEffect(() => {
@@ -72,6 +116,8 @@ const PageProvider = ({ children }) => {
 				addUserChoice,
 				userInput,
 				onUserInputChange,
+				date,
+				setCurrentDate,
 			}}>
 			{children}
 		</PageContext.Provider>
