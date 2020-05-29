@@ -5,7 +5,7 @@ import moment from 'moment';
 const PageProvider = ({ children }) => {
 	// Define state & setState with hook
 	// counts currentPage to show questions by each pages
-	const [currentPage, setCurrentPage] = useState(15);
+	const [currentPage, setCurrentPage] = useState(0);
 
 	// sets button to disabled when nothing has selected.
 	// const [isSelected, setIsSelected] = useState(false);
