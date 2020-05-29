@@ -6,6 +6,8 @@ const PageContext = createContext({
 	selectedCountries: [],
 	selectedChoices: [],
 	userData: {},
+	date: '',
+	result: {},
 	nextPage: () => {},
 	selectChoice: () => {},
 	selectCountry: () => {},
