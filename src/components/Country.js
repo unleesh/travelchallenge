@@ -48,37 +48,36 @@ const rotateN360 = keyframes`
 
 const OuterImgWrapper = styled.div`
 	border: ${(props) =>
-		props.isSelected === true ? '1px solid black' : '1px solid transparent'};
+		props.isSelected === true ? '1px solid white' : '1px solid transparent'};
 	border-width: medium;
 	border-radius: 50%;
 	border-bottom-color: transparent;
-	padding: 2px;
+	padding: 1px;
 	animation: ${(props) =>
 		props.isSelected === true
 			? css`
-					${rotate360} infinite 1s linear;
+					${rotate360} infinite 2s linear;
 			  `
 			: ''}  
 	position: relative;
 	width: 3em;
 	height: 3em;
 	overflow: hidden;
+	margin: 3px;
 	margin-bottom: 3px;
 `;
 
 const ImgWrapper = styled.img`
-	border: ${(props) =>
-		props.isSelected === true ? '1px solid black' : '1px solid transparent'};
 	border-width: medium;
 	border-radius: 50%;
 	border-right-color: transparent;
 	animation: ${(props) =>
 		props.isSelected === true
 			? css`
-					${rotateN360} infinite 1s linear;
+					${rotateN360} infinite 2s linear;
 			  `
 			: ''}  
-	padding: 2px;
+	padding: 1px;
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
