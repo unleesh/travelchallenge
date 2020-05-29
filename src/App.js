@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import PageProvider from './components/providers/PageProvider';
+import { ThemeProvider } from 'styled-components';
+import theme from './styles/theme';
+import { AppContainer, CardContainer } from './styles/StyleContainer';
+import PageController from './pages/PageController';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<ThemeProvider theme={theme}>
+			<AppContainer className='App'>
+				<CardContainer>
+					<PageProvider>
+						<PageController />
+					</PageProvider>
+				</CardContainer>
+			</AppContainer>
+		</ThemeProvider>
+	);
 }
 
 export default App;
