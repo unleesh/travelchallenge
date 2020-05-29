@@ -13,6 +13,7 @@ export const genderOptionStyles = {
 		marginRight: 10,
 		background: '',
 		fontSize: 12,
+		color: 'black',
 	}),
 	control: (base) => ({
 		...base,
@@ -21,6 +22,7 @@ export const genderOptionStyles = {
 		width: '100%',
 		textAlign: 'center',
 		cursor: 'pointer',
+		color: 'black',
 	}),
 	dropdownIndicator: (base) => ({
 		...base,
@@ -36,6 +38,7 @@ export const genderOptionStyles = {
 		paddingLeft: 2,
 		background: '',
 		fontSize: 12,
+		color: 'black',
 	}),
 };
 
@@ -54,10 +57,12 @@ export const emailOptionStyles = {
 		marginLeft: 10,
 		background: '',
 		fontSize: 12,
+		color: 'black',
 	}),
 	control: (base) => ({
 		...base,
 		fontSize: 12,
+		color: 'black',
 		borderRadius: 20,
 		width: '100%',
 		textAlign: 'center',
@@ -77,5 +82,6 @@ export const emailOptionStyles = {
 		paddingLeft: 2,
 		backgroundColor: '',
 		fontSize: 12,
+		color: 'black',
 	}),
 };

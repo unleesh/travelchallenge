@@ -17,18 +17,17 @@ const Question = ({ currentPage, selectedChoices }) => {
 	return (
 		<QuestionPageWrapper>
 			{/* <div>Question {currentPage}</div> */}
-			<QuestionWrapper>
-				{currentPage}. {question}
-			</QuestionWrapper>
-			<div>
-				{choices.map((choice) => (
+			<QuestionWrapper>{question}</QuestionWrapper>
+			<ChoicesWrapper>
+				{choices.map((choice, index) => (
 					<Choice
-						key={`${currentPage}_${choice}`}
+						key={`${currentPage}_${index}`}
 						currentPage={currentPage}
 						choice={choice}
+						index={index}
 					/>
 				))}
-			</div>
+			</ChoicesWrapper>
 		</QuestionPageWrapper>
 	);
 };
@@ -41,8 +40,19 @@ const QuestionPageWrapper = styled.div`
 
 const QuestionWrapper = styled.div`
 	align-self: center;
-	position: absolute;
-	top: 3em;
+	// position: absolute;
+	// top: 3em;
+	width: 100%;
+	margin-bottom: 40px;
+	font-size: 20px;
+	text-align: center;
+`;
+
+const ChoicesWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 `;
 
 // const Button = styled.button`
