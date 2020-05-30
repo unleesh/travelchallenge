@@ -5,11 +5,11 @@ import styled from 'styled-components';
 import PageContext from '../contexts/Page.context';
 
 const ResultPage = () => {
-	const {} = useContext(PageContext);
+	const { travelType } = useContext(PageContext);
 	return (
 		<ResultPageWrapper>
 			<Result />
-			<TravelType />
+			<TravelType travelType={travelType} />
 		</ResultPageWrapper>
 	);
 };

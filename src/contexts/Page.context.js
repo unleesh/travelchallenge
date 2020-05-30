@@ -8,9 +8,13 @@ const PageContext = createContext({
 	userData: {},
 	date: '',
 	result: {},
+	country: '',
+	travelType: '',
 	nextPage: () => {},
 	selectChoice: () => {},
 	selectCountry: () => {},
+	getCountry: () => {},
+	getTravelType: () => {},
 });
 
 export default PageContext;
