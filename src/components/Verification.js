@@ -27,7 +27,7 @@ const Verification = () => {
 		setPageCount,
 		setCurrentDate,
 	} = useContext(PageContext);
-	const { username, email } = userInput;
+	const { username, email, prefix, address } = userInput;
 	// const handleOptionChange = (selectedOption) => {
 	// 	if (selectedOption.value[0] !== '@') {
 	// 		setGenderOption(selectedOption);
@@ -36,9 +36,9 @@ const Verification = () => {
 	// 	}
 	// 	console.log(`Option selected:`, selectedOption);
 	// };
-	console.log(userInput);
+	// console.log(userInput);
 	return (
-		<div>
+		<FormOuterWrapper>
 			<form
 				onSubmit={(e) => {
 					e.preventDefault();
@@ -51,11 +51,12 @@ const Verification = () => {
 						<OptionWrapper
 							placeholder='Select'
 							styles={genderOptionStyles}
-							value={genderOption}
+							value={{ value: prefix, label: prefix }}
 							onChange={(e) => onUserInputChange(e, 'prefix')}
 							options={genderOptions}
 						/>
 						<InputWrapper
+							placeholder='Full name'
 							type='text'
 							name='username'
 							value={username}
@@ -67,24 +68,31 @@ const Verification = () => {
 					<TextWrapper>E-mail</TextWrapper>
 					<SelectWrapper>
 						<InputWrapper
+							placeholder='email'
 							type='text'
 							name='email'
 							value={email}
 							onChange={onUserInputChange}
 						/>
 						<CreatableSelect
+							placeholder='@email.com'
 							styles={emailOptionStyles}
-							value={emailOption}
+							value={{ value: address, label: address }}
 							onChange={(e) => onUserInputChange(e, 'address')}
 							options={emailOptions}
 						/>
 					</SelectWrapper>
 				</label>
-				<input type='submit' value='submit' />
+				<Input type='submit' value='submit' />
 			</form>
-		</div>
+		</FormOuterWrapper>
 	);
 };
+
+const FormOuterWrapper = styled.div`
+	display: flex;
+	text-align-last: center;
+`;
 
 const TextWrapper = styled.div`
 	text-align: center;
@@ -101,11 +109,24 @@ const SelectWrapper = styled.div`
 const InputWrapper = styled.input`
 	width: 70%;
 	color: black;
+	border-radius: 20px;
+	text-align: center;
 `;
 
 const OptionWrapper = styled(Select)`
-	background-color: red;
+	// background-color: red;
 	font-size: 20px;
+`;
+
+const Input = styled.input`
+	/* Adapt the colors based on primary prop */
+	background-color: white;
+	color: rgba(29, 188, 165, 1);
+	font-size: 1em;
+	margin: 15% auto 10%;
+	display: block;
+	width: 35%;
+	border-radius: 20px;
 `;
 
 export default Verification;
