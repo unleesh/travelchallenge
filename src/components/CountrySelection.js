@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { QuestionTitleWrapper } from '../styles/StyleContainer';
 
 const CountrySelection = ({ selectedCountries, setPageCount }) => {
-	console.log(selectedCountries);
+	// console.log(selectedCountries);
 	return (
 		<CountrySelectionWrapper>
 			<CountryTitleWrapper>
@@ -44,14 +44,9 @@ const CountriesWrapper = styled.div`
 	justify-content: center;
 `;
 
-const ButtonWrapper = styled.button`
-	margin: 5% auto 10%;
-	display: block;
-`;
-
 const Button = styled.button`
 	/* Adapt the colors based on primary prop */
-	background: 'white';
+	background-color: 'white';
 	color: rgba(29, 188, 165, 1);
 	font-size: 1em;
 	margin: 5% auto 10%;
