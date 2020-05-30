@@ -13,7 +13,8 @@ export const CardContainer = styled.div`
 	height: 575.291px;
 	top: 120.432px;
 	overflow: visible;
-	border: 1px solid black;
+	border-radius: 15px;
+	box-shadow: 7px 7px 10px #222;
 	background-color: rgba(29, 188, 165, 1);
 	display: flex;
 	align-items: center;

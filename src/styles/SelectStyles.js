@@ -1,4 +1,9 @@
 export const genderOptionStyles = {
+	placeholder: (provided, state) => ({
+		...provided,
+		textAlign: 'center',
+		fontSize: 12,
+	}),
 	option: (provided, state) => ({
 		...provided,
 		color: 'black',
@@ -17,7 +22,7 @@ export const genderOptionStyles = {
 	}),
 	control: (base) => ({
 		...base,
-		fontSize: 16,
+		fontSize: 12,
 		borderRadius: 20,
 		width: '100%',
 		textAlign: 'center',
@@ -65,7 +70,6 @@ export const emailOptionStyles = {
 		color: 'black',
 		borderRadius: 20,
 		width: '100%',
-		textAlign: 'center',
 		cursor: 'pointer',
 	}),
 	dropdownIndicator: (base) => ({
