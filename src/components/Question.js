@@ -28,6 +28,10 @@ const Question = ({ currentPage, selectedChoices }) => {
 					/>
 				))}
 			</ChoicesWrapper>
+			{/* 임시 퀘스천 카운터 */}
+			<QuestionCounter>
+			{currentPage}/14
+			</QuestionCounter>
 		</QuestionPageWrapper>
 	);
 };
@@ -36,6 +40,7 @@ const QuestionPageWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	font-size: 20px;
 `;
 
 const QuestionWrapper = styled.div`
@@ -53,6 +58,14 @@ const ChoicesWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+`;
+
+const QuestionCounter = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	font-size: 15px;
 `;
 
 // const Button = styled.button`
