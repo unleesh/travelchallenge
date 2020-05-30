@@ -56,7 +56,7 @@ export const mockData = [
 		question: (
 			<>
 				<QuestionTitleWrapper>
-					독서(영화)광런던 히드로 공항에 도착했습니다.
+					런던 히드로 공항에 도착했습니다.
 				</QuestionTitleWrapper>
 				<QuestionTitleWrapper>
 					승객님은 어떤 걸 먼저 하실 건가요?
@@ -470,6 +470,73 @@ export const mockCountries = [
 	{
 		abvName: 'SWE',
 		name: 'sweden',
+	},
+	{
+		abvName: 'THA',
+		name: 'thailand',
+	},
+];
+
+export const famousCountries = [
+	{
+		abvName: 'FRA',
+		name: 'france',
+	},
+	{
+		abvName: 'KOR',
+		name: 'korea',
+	},
+	{
+		abvName: 'ITA',
+		name: 'italy',
+	},
+	{
+		abvName: 'JPN',
+		name: 'japan',
+	},
+	{
+		abvName: 'CHN',
+		name: 'china',
+	},
+	{
+		abvName: 'USA',
+		name: 'usa',
+	},
+	{
+		abvName: 'USA2',
+		name: 'usa2',
+	},
+	{
+		abvName: 'ESP',
+		name: 'spain',
+	},
+	{
+		abvName: 'HKG',
+		name: 'hongkong',
+	},
+	{
+		abvName: 'UAE',
+		name: 'uae',
+	},
+	{
+		abvName: 'UK',
+		name: 'uk',
+	},
+	{
+		abvName: 'TUR',
+		name: 'turkey',
+	},
+	{
+		abvName: 'EGY',
+		name: 'egypt',
+	},
+	{
+		abvName: 'CZE',
+		name: 'czech',
+	},
+	{
+		abvName: 'INA',
+		name: 'indonesia',
 	},
 	{
 		abvName: 'THA',
