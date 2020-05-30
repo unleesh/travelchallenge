@@ -40,8 +40,8 @@ const Result = () => {
 			</LeftImgWrapper> */}
 			<CountryTextOuterWrapper>
 				<CountryTextImgWrapper
-					src={require(`../Imgs/ticket_icons/thailand.png`)}
-					// src={require(`../Imgs/ticket_icons/${country}.png`)}
+					// src={require(`../Imgs/ticket_icons/thailand.png`)}
+					src={require(`../Imgs/ticket_icons/${country}.png`)}
 					alt=''
 				/>
 			</CountryTextOuterWrapper>
@@ -51,23 +51,23 @@ const Result = () => {
 					alt=''
 				/>
 				<IconNationWrapper
-					src={require(`../Imgs/icon_nation/usa.png`)}
-					// src={require(`../Imgs/icon_nation/${country}_.png`)}
+					// src={require(`../Imgs/icon_nation/usa.png`)}
+					src={require(`../Imgs/icon_nation/${country}_.png`)}
 					alt=''
 				/>
 			</IconNationOuterWrapper>
 			<TicketTextOuterWrapper>
-				{/* <TicketTextWrapper>{nameWithPrefix}</TicketTextWrapper>
+				<TicketTextWrapper>{nameWithPrefix}</TicketTextWrapper>
 				<TicketTextWrapper>{travelType}</TicketTextWrapper>
-				<TicketTextWrapper>{date}</TicketTextWrapper> */}
-				<TicketTextWrapper>Mr. Green</TicketTextWrapper>
+				<TicketTextWrapper>{date}</TicketTextWrapper>
+				{/* <TicketTextWrapper>Mr. Green</TicketTextWrapper>
 				<TicketTextWrapper>텐션몰빵</TicketTextWrapper>
-				<TicketTextWrapper>30 May 2020</TicketTextWrapper>
+				<TicketTextWrapper>30 May 2020</TicketTextWrapper> */}
 			</TicketTextOuterWrapper>
 			<LandmarkOuterWrapper>
 				<LandmarkImgWrapper
-					src={require(`../Imgs/ticket_icons/spain_landmark.png`)}
-					// src={require(`../Imgs/ticket_icons/${country}_landmark.png`)}
+					// src={require(`../Imgs/ticket_icons/spain_landmark.png`)}
+					src={require(`../Imgs/ticket_icons/${country}_landmark.png`)}
 					alt=''
 				/>
 			</LandmarkOuterWrapper>
