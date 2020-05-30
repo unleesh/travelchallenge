@@ -259,7 +259,7 @@ export const mockData = [
 				득템이라 생각하고 여러개를 사요
 			</QuestionTextWrapper>,
 			<QuestionTextWrapper>
-				득템이라 생각하고 여러개를 사요
+				가져다가 한국에서 팔 생각부터 들어요.
 			</QuestionTextWrapper>,
 			<QuestionTextWrapper>너무 저렴해 의심부터 드네요</QuestionTextWrapper>,
 		],
