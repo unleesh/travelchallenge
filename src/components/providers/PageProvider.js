@@ -1,11 +1,12 @@
 import React, { useState, useReducer, useEffect } from 'react';
 import PageContext from '../../contexts/Page.context';
 import moment from 'moment';
+import { famousCountries } from '../../mockData';
 
 const PageProvider = ({ children }) => {
 	// Define state & setState with hook
 	// counts currentPage to show questions by each pages
-	const [currentPage, setCurrentPage] = useState(0);
+	const [currentPage, setCurrentPage] = useState(-1);
 
 	// sets button to disabled when nothing has selected.
 	// const [isSelected, setIsSelected] = useState(false);
@@ -47,6 +48,12 @@ const PageProvider = ({ children }) => {
 
 	// called when the button is clicked
 	const setPageCount = () => {
+		if (currentPage === 14) {
+			getTravelType();
+			console.log('travel Type :', travelType);
+		} else if (currentPage === 15) {
+			getCountry();
+		}
 		setTimeout(() => {
 			setCurrentPage(currentPage + 1);
 		}, 100);
@@ -87,7 +94,6 @@ const PageProvider = ({ children }) => {
 
 	const setCurrentDate = () => {
 		const date = moment().format('DD MMM YYYY');
-		console.log(date);
 		setDate(date);
 	};
 
@@ -95,10 +101,59 @@ const PageProvider = ({ children }) => {
 	 *	1. selectedChoices 에 따른 성향 계산
 	 *  2. 랜덤한 나라 선택 Math.random()
 	 */
-	const nameWithPrefix = `${userInput.prefix} ${userInput.name}`;
+	const updateResult = () => {};
 
-	const updateResult = () => {
-		const name = userInput.prefix + userInput.name;
+	const [travelType, setTravelType] = useState('');
+
+	const getTravelType = () => {
+		const first = selectedChoices[0],
+			second = selectedChoices[3],
+			third = selectedChoices[8],
+			fourth = selectedChoices[13],
+			type = `${first}${second}${third}${fourth}`;
+		console.log('type :', type);
+		if (type === '1200' || type === '1100') {
+			setTravelType('텐션몰빵');
+		} else if (type === '1211') {
+			setTravelType('방랑의 민족');
+		} else if (type === '1111' || type === '1101') {
+			setTravelType('자연인');
+		} else if (type === '1000') {
+			setTravelType('플렉스');
+		} else if (type === '1011' || type === '1010') {
+			setTravelType('개척자');
+		} else if (type === '0201' || type === '1110') {
+			setTravelType('프로듀서101');
+		} else if (type === '0200' || type === '1210') {
+			setTravelType('다다익선');
+		} else if (type === '0211' || type === '0210') {
+			setTravelType('정약용');
+		} else if (type === '0101') {
+			setTravelType('덕후');
+		} else if (type === '0100' || type === '0110') {
+			setTravelType('레저킹');
+		} else if (type === '0001') {
+			setTravelType('여행 미슐러');
+		} else if (type === '0000' || type === '1201') {
+			setTravelType('셀럽');
+		} else if (type === '1001') {
+			setTravelType('나혼자 간다');
+		} else if (type === '0011') {
+			setTravelType('프로파일러');
+		} else if (type === '0010') {
+			setTravelType('뉴요커');
+		}
+		// console.log('travel Type :', travelType);
+	};
+
+	const [country, setCountry] = useState('');
+
+	const getCountry = () => {
+		const min = 0;
+		const max = famousCountries.length;
+		const randomNum = Math.floor(Math.random() * (max - min)) + min;
+		console.log('country :', famousCountries[randomNum].name);
+		setCountry(famousCountries[randomNum].name);
 	};
 
 	useEffect(() => {
@@ -118,6 +173,8 @@ const PageProvider = ({ children }) => {
 				onUserInputChange,
 				date,
 				setCurrentDate,
+				travelType,
+				country,
 			}}>
 			{children}
 		</PageContext.Provider>
