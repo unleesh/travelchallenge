@@ -13,6 +13,12 @@ const GlobalStyle = createGlobalStyle`
 		cursor: default;
 		color: rgba(255,255,255,1);
 		font-size: 25px;
+		-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 `;
 

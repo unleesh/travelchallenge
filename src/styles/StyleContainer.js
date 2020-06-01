@@ -11,7 +11,9 @@ export const CardContainer = styled.div`
 	position: absolute;
 	width: 336.128px;
 	height: 575.291px;
-	top: 120.432px;
+	// top: 120.432px;
+	top: 30px;
+	align-self: center;
 	overflow: visible;
 	border-radius: 15px;
 	box-shadow: 7px 7px 10px #222;

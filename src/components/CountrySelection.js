@@ -46,13 +46,16 @@ const CountriesWrapper = styled.div`
 
 const Button = styled.button`
 	/* Adapt the colors based on primary prop */
-	background-color: 'white';
+	background-color: white;
 	color: rgba(29, 188, 165, 1);
 	font-size: 1em;
 	margin: 5% auto 10%;
 	display: block;
 	width: 25%;
 	border-radius: 20px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 `;
 
 export default CountrySelection;
