@@ -70,7 +70,7 @@ export const mockData = [
 				</QuestionTextWrapper>
 				<QuestionTextWrapper>무작정 관광지 순회하기</QuestionTextWrapper>
 			</>,
-			<QuestionTextWrapper>유심침부터 사야지~</QuestionTextWrapper>,
+			<QuestionTextWrapper>유심칩부터 사야지~</QuestionTextWrapper>,
 			<>
 				<QuestionTextWrapper>너무 힘들어~ㅠㅠ</QuestionTextWrapper>
 				<QuestionTextWrapper>숙소가서 뻗기</QuestionTextWrapper>
