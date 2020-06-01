@@ -56,7 +56,7 @@ const PageProvider = ({ children }) => {
 		}
 		setTimeout(() => {
 			setCurrentPage(currentPage + 1);
-		}, 100);
+		}, 50);
 		// console.log(currentPage, isSelected);
 	};
 
@@ -141,7 +141,7 @@ const PageProvider = ({ children }) => {
 		} else if (type === '0011') {
 			setTravelType('프로파일러');
 		} else if (type === '0010') {
-			setTravelType('뉴요커');
+			setTravelType('뉴요커2');
 		}
 		// console.log('travel Type :', travelType);
 	};

@@ -1,6 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import Select from 'react-select';
-import CreatableSelect from 'react-select/creatable';
+import Creatable from 'react-select/creatable';
 import PageContext from '../contexts/Page.context';
 import styled from 'styled-components';
 import { genderOptionStyles, emailOptionStyles } from '../styles/SelectStyles';
@@ -50,7 +50,7 @@ const Verification = () => {
 					<SelectWrapper>
 						<OptionWrapper
 							placeholder='Select'
-							styles={genderOptionStyles}
+							// styles={genderOptionStyles}
 							value={{ value: prefix, label: prefix }}
 							onChange={(e) => onUserInputChange(e, 'prefix')}
 							options={genderOptions}
@@ -74,9 +74,9 @@ const Verification = () => {
 							value={email}
 							onChange={onUserInputChange}
 						/>
-						<CreatableSelect
+						<Creatable
 							placeholder='@email.com'
-							styles={emailOptionStyles}
+							// styles={emailOptionStyles}
 							value={{ value: address, label: address }}
 							onChange={(e) => onUserInputChange(e, 'address')}
 							options={emailOptions}
@@ -107,7 +107,7 @@ const SelectWrapper = styled.div`
 `;
 
 const InputWrapper = styled.input`
-	width: 70%;
+	width: 40%;
 	color: black;
 	border-radius: 20px;
 	text-align: center;
@@ -116,6 +116,7 @@ const InputWrapper = styled.input`
 const OptionWrapper = styled(Select)`
 	// background-color: red;
 	font-size: 20px;
+	width: 40%;
 `;
 
 const Input = styled.input`
