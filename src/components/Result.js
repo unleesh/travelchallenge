@@ -18,30 +18,9 @@ const Result = () => {
 					alt=''
 				/>
 			</TicketWrapper>
-			{/* <LeftImgWrapper>
-				<CountryTextOuterWrapper>
-					<CountryTextImgWrapper
-						src={require(`../Imgs/ticket_icons/france.png`)}
-						// src={require(`../Imgs/ticket_icons/${country}.png`)}
-						alt=''
-					/>
-				</CountryTextOuterWrapper>
-				<IconNationOuterWrapper>
-					<IconNationWrapper
-						src={require(`../Imgs/icon_nation/korea_.png`)}
-						alt=''
-					/>
-					<IconNationWrapper
-						src={require(`../Imgs/icon_nation/france.png`)}
-						// src={require(`../Imgs/icon_nation/${country}_.png`)}
-						alt=''
-					/>
-				</IconNationOuterWrapper>
-			</LeftImgWrapper> */}
 			<CountryTextOuterWrapper>
 				<CountryTextImgWrapper
-					// src={require(`../Imgs/ticket_icons/thailand.png`)}
-					src={require(`../Imgs/ticket_icons/${country}.png`)}
+					src={require(`../Imgs/destinations/${country}.png`)}
 					alt=''
 				/>
 			</CountryTextOuterWrapper>
@@ -51,7 +30,6 @@ const Result = () => {
 					alt=''
 				/>
 				<IconNationWrapper
-					// src={require(`../Imgs/icon_nation/usa.png`)}
 					src={require(`../Imgs/icon_nation/${country}_.png`)}
 					alt=''
 				/>
@@ -60,14 +38,10 @@ const Result = () => {
 				<TicketTextWrapper>{nameWithPrefix}</TicketTextWrapper>
 				<TicketTextWrapper>{travelType}</TicketTextWrapper>
 				<TicketTextWrapper>{date}</TicketTextWrapper>
-				{/* <TicketTextWrapper>Mr. Green</TicketTextWrapper>
-				<TicketTextWrapper>텐션몰빵</TicketTextWrapper>
-				<TicketTextWrapper>30 May 2020</TicketTextWrapper> */}
 			</TicketTextOuterWrapper>
 			<LandmarkOuterWrapper>
 				<LandmarkImgWrapper
-					// src={require(`../Imgs/ticket_icons/spain_landmark.png`)}
-					src={require(`../Imgs/ticket_icons/${country}_landmark.png`)}
+					src={require(`../Imgs/landmarks/${country}.png`)}
 					alt=''
 				/>
 			</LandmarkOuterWrapper>
@@ -78,23 +52,17 @@ const Result = () => {
 const TicketOuterWrapper = styled.div`
 	display: flex;
 	justify-content: center;
+	width: 100%;
+	height: 26%;
 `;
 
 const TicketWrapper = styled.div`
 	display: flex;
-	transform: rotate(-90deg);
-	width: 38%;
-	align-self: center;
+	transform: rotate(90deg);
 	position: absolute;
-	top: -70px;
-`;
-
-const LeftImgWrapper = styled.div`
-	display: flex;
-	flex-flow: wrap;
-	position: absolute;
-	z-index: 1;
 	align-self: flex-end;
+	max-width: 40%;
+	max-height: 55%;
 `;
 
 const CountryTextOuterWrapper = styled.div`
@@ -102,38 +70,34 @@ const CountryTextOuterWrapper = styled.div`
 	align-self: center;
 	position: absolute;
 	z-index: 1;
-	padding-bottom: 56%;
-
-	// width: 90%;
-	// margin-left: 7%;
-	// margin-bottom: -8%;
+	width: 55%;
+	height: 7%;
+	align-self: start;
+	left: 7%;
+	top: 13%;
 `;
 
 const CountryTextImgWrapper = styled.img`
 	display: flex;
-	width: 13%;
-	transform: rotate(-90deg);
-	margin-left: 3%;
+	width: 55%;
+	height: 100%;
 `;
 
 const IconNationOuterWrapper = styled.div`
+	display: flex;
 	flex-direction: row;
 	z-index: 1;
 	position: absolute;
-	margin-top: -67px;
-	// padding-left: 8%;
 
-	// margin-bottom: 13%;
-	// width: 100%;
-	// // margin-left: 2%;
+	width: 105px;
+	height: 19px;
+	justify-content: space-between;
+	left: 6%;
+	margin-top: 6%;
 `;
 
 const IconNationWrapper = styled.img`
-	width: 8%;
-	// height: 19%;
-	// margin-left: -5%;
-	margin-right: 65px;
-	margin-left: -6px;
+	width: 15%;
 `;
 
 const TicketImgWrapper = styled.img`
@@ -145,10 +109,10 @@ const TicketTextOuterWrapper = styled.div`
 	z-index: 1;
 	flex-direction: column;
 	position: absolute;
-	width: 45%;
-	padding-left: 23%;
-	align-self: flex-end;
-	padding-bottom: 40px;
+	width: 20%;
+	text-align: center;
+	margin-left: 32px;
+	top: 67px;
 `;
 
 const TicketTextWrapper = styled.div`
@@ -168,10 +132,10 @@ const LandmarkOuterWrapper = styled.div`
 
 const LandmarkImgWrapper = styled.img`
 	display: flex;
-	width: 14%;
-	transform: rotate(-90deg);
-	margin-right: 9%;
-	margin-bottom: 3%;
+	width: 20%;
+	height: 20%;
+	margin-right: 18px;
+	margin-bottom: 2%;
 `;
 
 export default Result;
