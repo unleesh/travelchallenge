@@ -6,7 +6,7 @@ import { famousCountries } from '../../mockData';
 const PageProvider = ({ children }) => {
 	// Define state & setState with hook
 	// counts currentPage to show questions by each pages
-	const [currentPage, setCurrentPage] = useState(-1);
+	const [currentPage, setCurrentPage] = useState(-2);
 
 	// sets button to disabled when nothing has selected.
 	// const [isSelected, setIsSelected] = useState(false);
