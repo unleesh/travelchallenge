@@ -9,10 +9,10 @@ const TravelType = ({ travelType }) => {
 				alt=''
 			/>
 			<TypeTextImgWrapper
-				// src={require(`../Imgs/여행자_유형/개척자.png`)}
 				src={require(`../Imgs/여행자_유형/${travelType}.png`)}
 				alt=''
 			/>
+			<StampImgWrapper src={require(`../Imgs/ticket_icons/stamp.png`)} alt='' />
 		</TravelTypeWrapper>
 	);
 };
@@ -22,6 +22,7 @@ const TravelTypeWrapper = styled.div`
 	width: 100%;
 	height: 38%;
 	justify-content: center;
+	align-items: center;
 `;
 
 const TravelTypeImgWrapper = styled.img`
@@ -38,6 +39,15 @@ const TypeTextImgWrapper = styled.img`
 	align-self: flex-start;
 	position: absolute;
 	bottom: 120px;
+`;
+
+const StampImgWrapper = styled.img`
+	display: flex;
+	z-index: 1;
+	position: absolute;
+	width: 20%;
+	bottom: 2%;
+	right: 6%;
 `;
 
 export default TravelType;
