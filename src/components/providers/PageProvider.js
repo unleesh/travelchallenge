@@ -50,9 +50,11 @@ const PageProvider = ({ children }) => {
 	const setPageCount = () => {
 		if (currentPage === 14) {
 			getTravelType();
-			console.log('travel Type :', travelType);
-		} else if (currentPage === 15) {
 			getCountry();
+			setCurrentDate(); // without form
+			// console.log('travel Type :', travelType);
+		} else if (currentPage === 15) {
+			// getCountry(); without form
 		}
 		setTimeout(() => {
 			setCurrentPage(currentPage + 1);
