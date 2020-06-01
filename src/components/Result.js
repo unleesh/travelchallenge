@@ -35,7 +35,8 @@ const Result = () => {
 				/>
 			</IconNationOuterWrapper>
 			<TicketTextOuterWrapper>
-				<TicketTextWrapper>{nameWithPrefix}</TicketTextWrapper>
+				{/* <TicketTextWrapper>{nameWithPrefix}</TicketTextWrapper> */}
+				<TicketTextWrapper>Traveler</TicketTextWrapper>
 				<TicketTextWrapper>{travelType}</TicketTextWrapper>
 				<TicketTextWrapper>{date}</TicketTextWrapper>
 			</TicketTextOuterWrapper>
