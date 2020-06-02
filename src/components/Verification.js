@@ -36,10 +36,12 @@ const Verification = () => {
 				<SelectWrapper>
 					<label htmlFor='gender'></label>
 					<GenderInputWrapper
+						placeholder='title'
 						list='genders'
 						name='gender'
 						id='gender'
 						value={title}
+						required
 						onChange={(e) => onUserInputChange(e, 'title')}
 					/>
 					<datalist id='genders'>
@@ -48,10 +50,12 @@ const Verification = () => {
 						))}
 					</datalist>
 					<InputWrapper
-						placeholder='Full name'
+						placeholder='Your name'
 						type='text'
 						name='username'
+						maxlength='10'
 						value={username}
+						required
 						onChange={onUserInputChange}
 					/>
 				</SelectWrapper>
@@ -63,14 +67,17 @@ const Verification = () => {
 							type='text'
 							name='email'
 							value={email}
+							required
 							onChange={onUserInputChange}
 						/>
 						<label htmlFor='address'></label>
 						<InputWrapper
+							placeholder='@example.com'
 							list='addresses'
 							name='address'
 							id='address'
 							value={address}
+							required
 							onChange={(e) => onUserInputChange(e, 'address')}
 						/>
 						<datalist id='addresses'>
@@ -88,6 +95,7 @@ const Verification = () => {
 
 const FormOuterWrapper = styled.div`
 	display: flex;
+	font-family: 'AxiaStencilLight';
 	text-align-last: center;
 `;
 
@@ -129,6 +137,7 @@ const Input = styled.input`
 	/* Adapt the colors based on primary prop */
 	background-color: white;
 	color: rgba(29, 188, 165, 1);
+	font-family: 'AxiaStencilLight';
 	font-size: 1em;
 	margin: 15% auto 10%;
 	display: block;
