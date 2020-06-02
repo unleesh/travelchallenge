@@ -24,7 +24,7 @@ const PageProvider = ({ children }) => {
 	const [userInput, setUserInput] = useReducer(
 		(state, newState) => ({ ...state, ...newState }),
 		{
-			prefix: '',
+			title: '',
 			username: '',
 			email: '',
 			address: '',
@@ -76,20 +76,22 @@ const PageProvider = ({ children }) => {
 	};
 
 	// update inputs with useReducer
-	const onUserInputChange = (e, prefix = null) => {
-		let name;
+	const onUserInputChange = (e, title = null) => {
+		let key;
 		let newValue;
-		if (!prefix) {
+		const { name, value } = e.target;
+		if (!title) {
 			//input
-			name = e.target.name;
-			newValue = e.target.value;
+			key = name;
+			newValue = value;
 		} else {
 			// dropdown
-			name = prefix;
-			newValue = e.value === 'None' ? '' : e.value;
+			console.log('e.target :', value);
+			key = title;
+			newValue = value === 'None' ? '' : value;
 		}
-		console.log('name', name);
-		setUserInput({ [name]: newValue });
+		console.log('key', key);
+		setUserInput({ [key]: newValue });
 	};
 
 	const setCurrentDate = () => {
