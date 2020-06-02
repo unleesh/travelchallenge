@@ -63,6 +63,13 @@
 		<!-- End Facebook Pixel Code -->
 	</head>
 	<body>
+		<script>
+			fbq('track', 'ViewContent', {
+				value: 1,
+				content_ids: 'test',
+				content_type: 'challenge',
+			});
+		</script>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
 	</body>
