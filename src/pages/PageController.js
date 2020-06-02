@@ -13,9 +13,10 @@ const PageController = () => {
 		return <StartPage />;
 	} else if (currentPage === -1) {
 		return <IntroPage />;
+		// } else if (currentPage === 15) {
+		// 	return <VerificationPage />;
+		// } else if (currentPage === 16) {
 	} else if (currentPage === 15) {
-		return <VerificationPage />;
-	} else if (currentPage === 16) {
 		return (
 			<>
 				{/* <ResultLoadingPage /> */}
