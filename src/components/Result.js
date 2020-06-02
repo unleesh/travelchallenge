@@ -34,8 +34,10 @@ const Result = () => {
 					alt=''
 				/>
 			</IconNationOuterWrapper>
-			<TicketTextOuterWrapper>
-				<TicketTextWrapper>{nameWithTitle}</TicketTextWrapper>
+			<TicketTextOuterWrapper name={nameWithTitle.length}>
+				<TicketTextWrapper name={nameWithTitle.length}>
+					{nameWithTitle}
+				</TicketTextWrapper>
 				<TicketTextWrapper>{travelType}</TicketTextWrapper>
 				<TicketTextWrapper>{date}</TicketTextWrapper>
 			</TicketTextOuterWrapper>
@@ -54,6 +56,7 @@ const TicketOuterWrapper = styled.div`
 	justify-content: center;
 	width: 100%;
 	height: 26%;
+	font-family: 'AxiaStencilLight';
 `;
 
 const TicketWrapper = styled.div`
@@ -73,7 +76,7 @@ const CountryTextOuterWrapper = styled.div`
 	width: 55%;
 	height: 7%;
 	align-self: start;
-	left: 7%;
+	left: 6%;
 	top: 13%;
 `;
 
@@ -109,14 +112,14 @@ const TicketTextOuterWrapper = styled.div`
 	z-index: 1;
 	flex-direction: column;
 	position: absolute;
-	width: 20%;
+	width: 30%;
 	text-align: center;
 	margin-left: 32px;
-	top: 67px;
+	top: ${(props) => (props.name > 20 ? '71px' : '67px')};
 `;
 
 const TicketTextWrapper = styled.div`
-	font-size: 10px;
+	font-size: ${(props) => (props.name > 20 ? '8px' : '10px')};
 	color: black;
 	margin-top: 13px;
 `;
