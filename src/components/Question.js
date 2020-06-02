@@ -1,7 +1,7 @@
 import React from 'react';
 import Choice from './Choice';
 import styled from 'styled-components';
-import { mockData_KOR } from '../mockData';
+import { mockData_KOR, mockData_ENG } from '../mockData';
 
 /* 각 질문의 카운트가 될 currentPage,
  ** 각 질문과 선택지를 담은 배열 혹은 객체가 있다면 currentPage 로 해당 문제를 출력
@@ -11,7 +11,7 @@ import { mockData_KOR } from '../mockData';
 const Question = ({ currentPage, lang }) => {
 	// 뒤의 조건은 영어로 변경
 	const { question, choices } =
-		lang === 'KOR' ? mockData_KOR[currentPage] : mockData_KOR[currentPage];
+		lang === 'KOR' ? mockData_KOR[currentPage] : mockData_ENG[currentPage];
 	return (
 		<QuestionPageWrapper>
 			<QuestionWrapper>{question}</QuestionWrapper>

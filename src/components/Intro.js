@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import PageContext from '../contexts/Page.context';
-import { mockData_KOR } from '../mockData';
+import { mockData_KOR, mockData_ENG } from '../mockData';
 
 const Intro = () => {
 	const { setPageCount, lang } = useContext(PageContext);
 	// 뒤의 조건은 영어로 변경 필요
-	const { text } = lang === 'KOR' ? mockData_KOR[0] : mockData_KOR[0];
+	const { text } = lang === 'KOR' ? mockData_KOR[0] : mockData_ENG[0];
 	return (
 		<IntroOuterWrapper>
 			<NoteOuterWrapper>

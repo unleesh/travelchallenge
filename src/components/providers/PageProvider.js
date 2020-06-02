@@ -115,35 +115,35 @@ const PageProvider = ({ children }) => {
 			type = `${first}${second}${third}${fourth}`;
 		console.log('type :', type);
 		if (type === '1200' || type === '1100') {
-			setTravelType('텐션몰빵');
+			lang === 'KOR' ? setTravelType('텐션몰빵') : setTravelType('energizer');
 		} else if (type === '1211') {
-			setTravelType('방랑의 민족');
+			lang === 'KOR' ? setTravelType('방랑의 민족') : setTravelType('wanderlust'); ;
 		} else if (type === '1111' || type === '1101') {
-			setTravelType('자연인');
+			lang === 'KOR' ? setTravelType('자연인') : setTravelType('nature seeker'); ;;
 		} else if (type === '1000') {
-			setTravelType('플렉스');
+			lang === 'KOR' ? setTravelType('플렉스') : setTravelType('millionaire'); ;;
 		} else if (type === '1011' || type === '1010') {
-			setTravelType('개척자');
+			lang === 'KOR' ? setTravelType('개척자') : setTravelType('first mover'); ;;
 		} else if (type === '0201' || type === '1110') {
-			setTravelType('프로듀서101');
+			lang === 'KOR' ? setTravelType('프로듀서101') : setTravelType('producer'); ;;
 		} else if (type === '0200' || type === '1210') {
-			setTravelType('다다익선');
+			lang === 'KOR' ? setTravelType('다다익선') : setTravelType('party lover'); ;;
 		} else if (type === '0211' || type === '0210') {
-			setTravelType('정약용');
+			lang === 'KOR' ? setTravelType('정약용') : setTravelType('scrooge'); ;;
 		} else if (type === '0101') {
-			setTravelType('덕후');
+			lang === 'KOR' ? setTravelType('덕후') : setTravelType('geek'); ;;
 		} else if (type === '0100' || type === '0110') {
-			setTravelType('레저킹');
+			lang === 'KOR' ? setTravelType('레저킹') : setTravelType('world explorer'); ;;
 		} else if (type === '0001') {
-			setTravelType('여행 미슐러');
+			lang === 'KOR' ? setTravelType('여행 미슐러') : setTravelType('michelin guide'); ;;
 		} else if (type === '0000' || type === '1201') {
-			setTravelType('셀럽');
+			lang === 'KOR' ? setTravelType('셀럽') : setTravelType('trend hunter'); ;;
 		} else if (type === '1001') {
-			setTravelType('나혼자 간다');
+			lang === 'KOR' ? setTravelType('나혼자 간다') : setTravelType('Outsider'); ;;
 		} else if (type === '0011') {
-			setTravelType('프로파일러');
+			lang === 'KOR' ? setTravelType('프로파일러') : setTravelType('perfectionist'); ;;
 		} else if (type === '0010') {
-			setTravelType('뉴요커2');
+			lang === 'KOR' ? setTravelType('뉴요커2') : setTravelType('city lover'); ;;
 		}
 		// console.log('travel Type :', travelType);
 	};

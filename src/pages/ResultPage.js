@@ -5,11 +5,11 @@ import styled from 'styled-components';
 import PageContext from '../contexts/Page.context';
 
 const ResultPage = () => {
-	const { travelType } = useContext(PageContext);
+	const { travelType, lang } = useContext(PageContext);
 	return (
 		<ResultPageWrapper>
 			<Result />
-			<TravelType travelType={travelType} />
+			<TravelType travelType={travelType} lang={lang} />
 		</ResultPageWrapper>
 	);
 };

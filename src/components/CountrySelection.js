@@ -1,11 +1,11 @@
 import React from 'react';
 import Country from './Country';
-import { mockData_KOR, mockCountries } from '../mockData';
+import { mockData_KOR, mockData_ENG, mockCountries } from '../mockData';
 import styled from 'styled-components';
 
 const CountrySelection = ({ setPageCount, lang }) => {
 	// 뒤의 조건은 영어로 변경 필요
-	const { text } = lang === 'KOR' ? mockData_KOR[15] : mockData_KOR[15];
+	const { text } = lang === 'KOR' ? mockData_KOR[15] : mockData_ENG[15];
 
 	return (
 		<CountrySelectionWrapper>
