@@ -9,7 +9,7 @@ const TravelType = ({ travelType }) => {
 				alt=''
 			/>
 			<TypeTextImgWrapper
-				src={require(`../Imgs/여행자_유형_영문/${travelType}_en.png`)}
+				src={require(`../Imgs/여행자_유형/${travelType}.png`)}
 				// src={require(`../Imgs/여행자_유형_영문/플렉스_en.png`)}
 				alt=''
 			/>

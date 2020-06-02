@@ -7,14 +7,11 @@ const Choice = ({ choice, index }) => {
 	// sets the color of choice when it's clicked.
 	const [choiceColor, setChoiceColor] = useState('rgba(29, 188, 165, 1)');
 	const { setPageCount, addUserChoice } = useContext(PageContext);
-	const onChoiceClick = debounce(
-		useCallback(() => {
-			setChoiceColor('rgba(249, 180, 56, 1)');
-			addUserChoice(index);
-			setPageCount();
-		}, [index, addUserChoice, setPageCount]),
-		500,
-	);
+	const onChoiceClick = debounce(() => {
+		setChoiceColor('rgba(249, 180, 56, 1)');
+		addUserChoice(index);
+		setPageCount();
+	}, 100);
 	return (
 		<ChoiceWrapper choiceColor={choiceColor} onClick={onChoiceClick}>
 			{choice}

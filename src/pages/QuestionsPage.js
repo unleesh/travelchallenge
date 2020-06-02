@@ -6,7 +6,7 @@ import CountrySelection from '../components/CountrySelection';
 const QuestionsPage = () => {
 	const props = useContext(PageContext);
 	// Switch page to CountrySelection after Questions
-	return props.currentPage === 14 ? (
+	return props.currentPage === 15 ? (
 		<CountrySelection {...props} />
 	) : (
 		<Question {...props} />
