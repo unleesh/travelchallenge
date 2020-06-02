@@ -117,33 +117,33 @@ const PageProvider = ({ children }) => {
 		if (type === '1200' || type === '1100') {
 			lang === 'KOR' ? setTravelType('텐션몰빵') : setTravelType('energizer');
 		} else if (type === '1211') {
-			lang === 'KOR' ? setTravelType('방랑의 민족') : setTravelType('wanderlust'); ;
+			lang === 'KOR' ? setTravelType('방랑의 민족') : setTravelType('wanderlust');
 		} else if (type === '1111' || type === '1101') {
-			lang === 'KOR' ? setTravelType('자연인') : setTravelType('nature seeker'); ;;
+			lang === 'KOR' ? setTravelType('자연인') : setTravelType('nature seeker');
 		} else if (type === '1000') {
-			lang === 'KOR' ? setTravelType('플렉스') : setTravelType('millionaire'); ;;
+			lang === 'KOR' ? setTravelType('플렉스') : setTravelType('millionaire');
 		} else if (type === '1011' || type === '1010') {
-			lang === 'KOR' ? setTravelType('개척자') : setTravelType('first mover'); ;;
+			lang === 'KOR' ? setTravelType('개척자') : setTravelType('first mover');
 		} else if (type === '0201' || type === '1110') {
-			lang === 'KOR' ? setTravelType('프로듀서101') : setTravelType('producer'); ;;
+			lang === 'KOR' ? setTravelType('프로듀서101') : setTravelType('producer');
 		} else if (type === '0200' || type === '1210') {
-			lang === 'KOR' ? setTravelType('다다익선') : setTravelType('party lover'); ;;
+			lang === 'KOR' ? setTravelType('다다익선') : setTravelType('party lover');
 		} else if (type === '0211' || type === '0210') {
-			lang === 'KOR' ? setTravelType('정약용') : setTravelType('scrooge'); ;;
+			lang === 'KOR' ? setTravelType('정약용') : setTravelType('scrooge');
 		} else if (type === '0101') {
-			lang === 'KOR' ? setTravelType('덕후') : setTravelType('geek'); ;;
+			lang === 'KOR' ? setTravelType('덕후') : setTravelType('geek');
 		} else if (type === '0100' || type === '0110') {
-			lang === 'KOR' ? setTravelType('레저킹') : setTravelType('world explorer'); ;;
+			lang === 'KOR' ? setTravelType('레저킹') : setTravelType('world explorer');
 		} else if (type === '0001') {
-			lang === 'KOR' ? setTravelType('여행 미슐러') : setTravelType('michelin guide'); ;;
+			lang === 'KOR' ? setTravelType('여행 미슐러') : setTravelType('michelin guide');
 		} else if (type === '0000' || type === '1201') {
-			lang === 'KOR' ? setTravelType('셀럽') : setTravelType('trend hunter'); ;;
+			lang === 'KOR' ? setTravelType('셀럽') : setTravelType('trend hunter');
 		} else if (type === '1001') {
-			lang === 'KOR' ? setTravelType('나혼자 간다') : setTravelType('Outsider'); ;;
+			lang === 'KOR' ? setTravelType('나혼자 간다') : setTravelType('Outsider');
 		} else if (type === '0011') {
-			lang === 'KOR' ? setTravelType('프로파일러') : setTravelType('perfectionist'); ;;
+			lang === 'KOR' ? setTravelType('프로파일러') : setTravelType('perfectionist');
 		} else if (type === '0010') {
-			lang === 'KOR' ? setTravelType('뉴요커2') : setTravelType('city lover'); ;;
+			lang === 'KOR' ? setTravelType('뉴요커2') : setTravelType('city lover');
 		}
 		// console.log('travel Type :', travelType);
 	};
