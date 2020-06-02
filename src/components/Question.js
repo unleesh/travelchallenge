@@ -1,15 +1,17 @@
 import React from 'react';
 import Choice from './Choice';
 import styled from 'styled-components';
-import { mockData } from '../mockData';
+import { mockData_KOR } from '../mockData';
 
 /* 각 질문의 카운트가 될 currentPage,
  ** 각 질문과 선택지를 담은 배열 혹은 객체가 있다면 currentPage 로 해당 문제를 출력
  ** 해당 질문에 속한 선택지들을 map
  ** 선택을 해야 isSelected로 인해 버튼 클릭 가능
  */
-const Question = ({ currentPage, selectedChoices }) => {
-	const { question, choices } = mockData[currentPage];
+const Question = ({ currentPage, lang }) => {
+	// 뒤의 조건은 영어로 변경
+	const { question, choices } =
+		lang === 'KOR' ? mockData_KOR[currentPage] : mockData_KOR[currentPage];
 	return (
 		<QuestionPageWrapper>
 			<QuestionWrapper>{question}</QuestionWrapper>
@@ -20,6 +22,7 @@ const Question = ({ currentPage, selectedChoices }) => {
 						currentPage={currentPage}
 						choice={choice}
 						index={index}
+						lang={lang}
 					/>
 				))}
 			</ChoicesWrapper>
