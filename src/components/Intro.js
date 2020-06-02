@@ -1,14 +1,15 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import PageContext from '../contexts/Page.context';
-import { mockData } from '../mockData';
+import { mockData_KOR } from '../mockData';
 
 const Intro = () => {
-	const { setPageCount } = useContext(PageContext);
-	const { text } = mockData[0];
+	const { setPageCount, lang } = useContext(PageContext);
+	// 뒤의 조건은 영어로 변경 필요
+	const { text } = lang === 'KOR' ? mockData_KOR[0] : mockData_KOR[0];
 	return (
 		<IntroOuterWrapper>
-			<NoteOuterWrapper data-testid='card'>
+			<NoteOuterWrapper>
 				<NoteImgWrapper
 					src={require('../Imgs/ticket_icons/traveltype_background.png')}
 					alt=''
