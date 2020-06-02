@@ -55,6 +55,7 @@ const ButtonWrapper = styled.button`
 	border-radius: 20px;
 	background-color: white;
 	color: rgba(29, 188, 165, 1);
+	font-family: 'AxiaStencilLight';
 `;
 
 export default Intro;

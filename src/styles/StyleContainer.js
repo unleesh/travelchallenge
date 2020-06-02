@@ -46,9 +46,10 @@ export const HighlightTextWrapper = styled.span`
 `;
 
 export const QuestionTitleWrapper = styled.div`
-	font-size: 16px;
+	font-size: 21px;
+	font-weight: bolder;
 `;
 
 export const QuestionTextWrapper = styled.div`
-	font-size: 14px;
+	font-size: 18px;
 `;
