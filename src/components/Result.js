@@ -5,11 +5,11 @@ import PageContext from '../contexts/Page.context';
 const Result = () => {
 	const {
 		date,
-		userInput: { prefix, username },
+		userInput: { title, username },
 		travelType,
 		country,
 	} = useContext(PageContext);
-	const nameWithPrefix = `${prefix} ${username}`;
+	const nameWithTitle = `${title} ${username}`;
 	return (
 		<TicketOuterWrapper>
 			<TicketWrapper>
@@ -35,7 +35,7 @@ const Result = () => {
 				/>
 			</IconNationOuterWrapper>
 			<TicketTextOuterWrapper>
-				<TicketTextWrapper>{nameWithPrefix}</TicketTextWrapper>
+				<TicketTextWrapper>{nameWithTitle}</TicketTextWrapper>
 				<TicketTextWrapper>{travelType}</TicketTextWrapper>
 				<TicketTextWrapper>{date}</TicketTextWrapper>
 			</TicketTextOuterWrapper>
