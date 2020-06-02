@@ -34,7 +34,7 @@ const Verification = () => {
 				}}>
 				<TextWrapper>Passenger</TextWrapper>
 				<SelectWrapper>
-					<label for='gender'></label>
+					<label htmlFor='gender'></label>
 					<GenderInputWrapper
 						list='genders'
 						name='gender'
@@ -65,7 +65,7 @@ const Verification = () => {
 							value={email}
 							onChange={onUserInputChange}
 						/>
-						<label for='address'></label>
+						<label htmlFor='address'></label>
 						<InputWrapper
 							list='addresses'
 							name='address'
