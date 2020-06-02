@@ -1,5 +1,4 @@
 import React, { useState, useContext, useEffect } from 'react';
-import Select from 'react-select';
 import PageContext from '../contexts/Page.context';
 import styled from 'styled-components';
 
@@ -124,12 +123,6 @@ const GenderInputWrapper = styled.input`
 	padding: 7px;
 	margin-left: 3px;
 	margin-right: 3px;
-`;
-
-const OptionWrapper = styled(Select)`
-	// background-color: red;
-	font-size: 20px;
-	width: 40%;
 `;
 
 const Input = styled.input`

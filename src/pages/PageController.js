@@ -9,13 +9,14 @@ import ResultPage from './ResultPage';
 
 const PageController = () => {
 	const { currentPage } = useContext(PageContext);
-	if (currentPage === -2) {
+	if (currentPage === -1) {
 		return <StartPage />;
-	} else if (currentPage === -1) {
+	} else if (currentPage === 0) {
 		return <IntroPage />;
-	} else if (currentPage === 15) {
-		return <VerificationPage />;
 	} else if (currentPage === 16) {
+		return <VerificationPage />;
+	} else if (currentPage === 17) {
+		// } else if (currentPage === 15) {
 		return (
 			<>
 				{/* <ResultLoadingPage /> */}
