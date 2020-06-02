@@ -26,7 +26,7 @@ const Result = () => {
 			</CountryTextOuterWrapper>
 			<IconNationOuterWrapper>
 				<IconNationWrapper
-					src={require(`../Imgs/icon_nation/korea_.png`)}
+					src={require(`../Imgs/icon_nation/worldicon.png`)}
 					alt=''
 				/>
 				<IconNationWrapper

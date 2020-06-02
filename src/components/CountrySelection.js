@@ -1,20 +1,15 @@
 import React from 'react';
 import Country from './Country';
-import { mockCountries } from '../mockData';
+import { mockData_KOR, mockData_ENG, mockCountries } from '../mockData';
 import styled from 'styled-components';
-import { QuestionTitleWrapper } from '../styles/StyleContainer';
 
-const CountrySelection = ({ selectedCountries, setPageCount }) => {
-	// console.log(selectedCountries);
+const CountrySelection = ({ setPageCount, lang }) => {
+	// 뒤의 조건은 영어로 변경 필요
+	const { text } = lang === 'KOR' ? mockData_KOR[15] : mockData_ENG[15];
+
 	return (
 		<CountrySelectionWrapper>
-			<CountryTitleWrapper>
-				<QuestionTitleWrapper>즐거운 여행 되셨나요~?</QuestionTitleWrapper>
-				<QuestionTitleWrapper>다음 34가지 국가들 중</QuestionTitleWrapper>
-				<QuestionTitleWrapper>
-					실제 여행했던 나라를 선택해주세요.<br></br>(스크롤하세요)
-				</QuestionTitleWrapper>
-			</CountryTitleWrapper>
+			<CountryTitleWrapper>{text}</CountryTitleWrapper>
 			<CountriesWrapper>
 				{mockCountries.map((mockCountry) => (
 					<Country key={mockCountry.abvName} {...mockCountry} />

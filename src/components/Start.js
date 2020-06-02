@@ -8,7 +8,11 @@ import PageContext from '../contexts/Page.context';
 
 const Start = () => {
 	// KOR/ENG 구분해줘야 함.
-	const { setPageCount } = useContext(PageContext);
+	const { setPageCount, setLang } = useContext(PageContext);
+	const setLangOpt = (e) => {
+		setLang(e.target.value);
+		setPageCount();
+	};
 	return (
 		<SVGWrapper>
 			<CovidWrapper src={covid19} alt='' />
@@ -17,8 +21,12 @@ const Start = () => {
 				<AirplaneWrapper src={airplane} alt='' />
 				<BottomWrapper src={bottom} alt='' />
 				<StartBtnWrapper>
-					<StartBtn onClick={() => setPageCount()}>KOREAN</StartBtn>
-					<StartBtn onClick={() => setPageCount()}>ENGLISH</StartBtn>
+					<StartBtn value='KOR' onClick={(e) => setLangOpt(e)}>
+						KOREAN
+					</StartBtn>
+					<StartBtn value='ENG' onClick={(e) => setLangOpt(e)}>
+						ENGLISH
+					</StartBtn>
 				</StartBtnWrapper>
 			</BottomSVGWrapper>
 		</SVGWrapper>
