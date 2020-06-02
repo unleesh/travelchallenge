@@ -36,6 +36,7 @@ const QuestionPageWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	font-family: 'Nanum';
 	font-size: 20px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;
@@ -67,7 +68,7 @@ const QuestionCounter = styled.div`
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	font-size: 15px;
+	font-size: 18px;
 	position: absolute;
 	bottom: 15%;
 }

@@ -25,6 +25,7 @@ const CountrySelectionWrapper = styled.div`
 	flex-direction: column;
 	text-align: center;
 	margin-top: auto;
+	font-family: 'Nanum';
 `;
 
 const CountryTitleWrapper = styled.div`
@@ -43,6 +44,7 @@ const Button = styled.button`
 	/* Adapt the colors based on primary prop */
 	background-color: white;
 	color: rgba(29, 188, 165, 1);
+	font-family: 'AxiaStencilLight';
 	font-size: 1em;
 	margin: 5% auto 10%;
 	display: block;
