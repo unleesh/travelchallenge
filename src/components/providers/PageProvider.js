@@ -8,8 +8,8 @@ const PageProvider = ({ children }) => {
 	// counts currentPage to show questions by each pages
 	const [currentPage, setCurrentPage] = useState(-1);
 
-	// sets button to disabled when nothing has selected.
-	// const [isSelected, setIsSelected] = useState(false);
+	// sets the language option.
+	const [lang, setLang] = useState('');
 
 	// // sets the color of button when it's clicked.
 	// const [btnColor, setBtnColor] = useState('rgba(29, 188, 165, 1)');
@@ -18,7 +18,7 @@ const PageProvider = ({ children }) => {
 	const [selectedCountries, setSelectedCountries] = useState([]);
 
 	// set user's choices of questions when clicked
-	const [selectedChoices, setSelectedChioces] = useState([]);
+	const [selectedChoices, setSelectedChoices] = useState([]);
 
 	// use reducer to set mutiple inputs -> add dropdown values later
 	const [userInput, setUserInput] = useReducer(
@@ -62,7 +62,7 @@ const PageProvider = ({ children }) => {
 
 	// Button color changes after the click on each choices
 	const addUserChoice = (choice) => {
-		setSelectedChioces([...selectedChoices, choice]);
+		setSelectedChoices([...selectedChoices, choice]);
 	};
 
 	const setCountryList = (selected, name) => {
@@ -167,6 +167,8 @@ const PageProvider = ({ children }) => {
 			value={{
 				currentPage,
 				setPageCount,
+				lang,
+				setLang,
 				selectedCountries,
 				setCountryList,
 				selectedChoices,
