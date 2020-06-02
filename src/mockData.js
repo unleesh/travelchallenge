@@ -6,7 +6,7 @@ import {
 	QuestionTextWrapper,
 } from './styles/StyleContainer';
 
-export const mockData = [
+export const mockData_KOR = [
 	{
 		id: 0,
 		text: (
@@ -364,6 +364,18 @@ export const mockData = [
 				<QuestionTextWrapper>저 일행 없어요ㅎㅎ</QuestionTextWrapper>
 			</>,
 		],
+	},
+	{
+		id: 15,
+		text: (
+			<>
+				<QuestionTitleWrapper>즐거운 여행 되셨나요~?</QuestionTitleWrapper>
+				<QuestionTitleWrapper>다음 34가지 국가들 중</QuestionTitleWrapper>
+				<QuestionTitleWrapper>
+					실제 여행했던 나라를 선택해주세요.<br></br>(스크롤하세요)
+				</QuestionTitleWrapper>
+			</>
+		),
 	},
 ];
 
