@@ -7,14 +7,19 @@ import styled from 'styled-components';
 import PageContext from '../contexts/Page.context';
 
 const Start = () => {
+	// KOR/ENG 구분해줘야 함.
 	const { setPageCount } = useContext(PageContext);
 	return (
-		<SVGWrapper onClick={() => setPageCount()}>
+		<SVGWrapper>
 			<CovidWrapper src={covid19} alt='' />
 			<TravelWrapper src={travelmonday} alt='' />
 			<BottomSVGWrapper>
 				<AirplaneWrapper src={airplane} alt='' />
 				<BottomWrapper src={bottom} alt='' />
+				<StartBtnWrapper>
+					<StartBtn onClick={() => setPageCount()}>KOREAN</StartBtn>
+					<StartBtn onClick={() => setPageCount()}>ENGLISH</StartBtn>
+				</StartBtnWrapper>
 			</BottomSVGWrapper>
 		</SVGWrapper>
 	);
@@ -23,6 +28,8 @@ const Start = () => {
 const SVGWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
+	z-index: ;
+	poistion: ;
 `;
 
 const BottomSVGWrapper = styled.div`
@@ -64,4 +71,29 @@ const BottomWrapper = styled.img`
 	bottom: 0px;
 	left: 0px;
 `;
+
+const StartBtnWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	right: 4%;
+	bottom: 15%;
+	z-index: 1;
+`;
+
+const StartBtn = styled.button`
+	/* Adapt the colors based on primary prop */
+	background-color: rgba(249, 180, 56, 1);
+	color: white;
+	font-size: 0.5em;
+	margin: 5% auto 10%;
+	padding: 5px 10px 5px 10px;
+	display: flex;
+	width: 100%;
+	border-radius: 20px;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+`;
+
 export default Start;
