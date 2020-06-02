@@ -10,9 +10,9 @@ const CountrySelection = ({ selectedCountries, setPageCount }) => {
 		<CountrySelectionWrapper>
 			<CountryTitleWrapper>
 				<QuestionTitleWrapper>즐거운 여행 되셨나요~?</QuestionTitleWrapper>
-				<QuestionTitleWrapper>다음 20가지 국가들 중</QuestionTitleWrapper>
+				<QuestionTitleWrapper>다음 34가지 국가들 중</QuestionTitleWrapper>
 				<QuestionTitleWrapper>
-					당신이 다녀온 나라를 골라보세요.
+					실제 여행했던 나라를 선택해주세요.<br></br>(스크롤하세요)
 				</QuestionTitleWrapper>
 			</CountryTitleWrapper>
 			<CountriesWrapper>
