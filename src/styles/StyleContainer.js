@@ -24,6 +24,27 @@ export const CardContainer = styled.div`
 	overflow-y: scroll;
 `;
 
+export const TextWrapper = styled.div`
+	font-size: 12px;
+	text-align: center;
+	color: black;
+	margin: 2px 0px 2px 0px;
+`;
+
+export const HighlightTextWrapper = styled.span`
+	font-size: 14px;
+	text-align: center;
+	color: black;
+	font-weight: bold;
+	border: ${(props) =>
+		props.border === true
+			? '1px solid rgba(249,180,56,1)'
+			: '1px solid transparent'};
+	background-color: ${(props) =>
+		props.border === true ? 'rgba(249,180,56,100)' : ''};
+	padding: 0px 2px 0px 2px;
+`;
+
 export const QuestionTitleWrapper = styled.div`
 	font-size: 16px;
 `;

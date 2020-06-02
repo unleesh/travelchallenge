@@ -24,7 +24,7 @@ const Question = ({ currentPage, selectedChoices }) => {
 				))}
 			</ChoicesWrapper>
 			{/* 임시 퀘스천 카운터 */}
-			<QuestionCounter>{currentPage + 1}/14</QuestionCounter>
+			<QuestionCounter>{currentPage}/14</QuestionCounter>
 		</QuestionPageWrapper>
 	);
 };
