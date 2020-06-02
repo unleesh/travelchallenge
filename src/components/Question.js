@@ -10,13 +10,8 @@ import { mockData } from '../mockData';
  */
 const Question = ({ currentPage, selectedChoices }) => {
 	const { question, choices } = mockData[currentPage];
-	// console.log(
-	// 	`currentPage: ${currentPage}, selected choices: ${selectedChoices}`,
-	// );
-	console.log(selectedChoices);
 	return (
 		<QuestionPageWrapper>
-			{/* <div>Question {currentPage}</div> */}
 			<QuestionWrapper>{question}</QuestionWrapper>
 			<ChoicesWrapper>
 				{choices.map((choice, index) => (
@@ -29,9 +24,7 @@ const Question = ({ currentPage, selectedChoices }) => {
 				))}
 			</ChoicesWrapper>
 			{/* 임시 퀘스천 카운터 */}
-			<QuestionCounter>
-			{currentPage+1}/14
-			</QuestionCounter>
+			<QuestionCounter>{currentPage}/14</QuestionCounter>
 		</QuestionPageWrapper>
 	);
 };
@@ -41,14 +34,19 @@ const QuestionPageWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	font-size: 20px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 `;
 
 const QuestionWrapper = styled.div`
 	align-self: center;
-	// position: absolute;
-	// top: 3em;
+	position: absolute;
+	top: 10%;
 	width: 100%;
-	margin-bottom: 40px;
 	font-size: 20px;
 	text-align: center;
 `;
@@ -58,6 +56,7 @@ const ChoicesWrapper = styled.div`
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	margin-top: 20%;
 `;
 
 const QuestionCounter = styled.div`
@@ -66,6 +65,9 @@ const QuestionCounter = styled.div`
 	align-items: center;
 	text-align: center;
 	font-size: 15px;
+	position: absolute;
+	bottom: 15%;
+}
 `;
 
 // const Button = styled.button`

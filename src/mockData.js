@@ -1,10 +1,39 @@
 import React from 'react';
 import {
+	TextWrapper,
+	HighlightTextWrapper,
 	QuestionTitleWrapper,
 	QuestionTextWrapper,
 } from './styles/StyleContainer';
 
 export const mockData = [
+	{
+		id: 0,
+		text: (
+			<>
+				<TextWrapper>안녕하십니까 승객 여러분</TextWrapper>
+				<TextWrapper>코로나로 여행을 못 가셔서 답답하시죠?</TextWrapper>
+				<br />
+				<TextWrapper>그래서 저희가 코로나 이후</TextWrapper>
+				<TextWrapper>여행을 준비하시는데 도움이 되고자</TextWrapper>
+				<TextWrapper>주요 도시를 가상 여행하며 알 수 있는</TextWrapper>
+				<TextWrapper>
+					<HighlightTextWrapper>여행 성향 테스트</HighlightTextWrapper> 를
+					준비했습니다.
+				</TextWrapper>
+				<br />
+				<TextWrapper>
+					본인의{' '}
+					<HighlightTextWrapper border>여행성향 유형</HighlightTextWrapper>을
+					확인하고,
+				</TextWrapper>
+				<TextWrapper>
+					<HighlightTextWrapper border>추천 목적지</HighlightTextWrapper>를
+					확인해보세요.
+				</TextWrapper>
+			</>
+		),
+	},
 	{
 		id: 1,
 		question: (

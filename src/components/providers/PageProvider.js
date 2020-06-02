@@ -6,7 +6,7 @@ import { famousCountries } from '../../mockData';
 const PageProvider = ({ children }) => {
 	// Define state & setState with hook
 	// counts currentPage to show questions by each pages
-	const [currentPage, setCurrentPage] = useState(-2);
+	const [currentPage, setCurrentPage] = useState(-1);
 
 	// sets button to disabled when nothing has selected.
 	// const [isSelected, setIsSelected] = useState(false);
@@ -24,7 +24,7 @@ const PageProvider = ({ children }) => {
 	const [userInput, setUserInput] = useReducer(
 		(state, newState) => ({ ...state, ...newState }),
 		{
-			prefix: '',
+			title: '',
 			username: '',
 			email: '',
 			address: '',
@@ -48,12 +48,10 @@ const PageProvider = ({ children }) => {
 
 	// called when the button is clicked
 	const setPageCount = () => {
-		if (currentPage === 14) {
+		if (currentPage === 15) {
 			getTravelType();
 			getCountry();
 			setCurrentDate(); // without form
-			// console.log('travel Type :', travelType);
-		} else if (currentPage === 15) {
 			// getCountry(); without form
 		}
 		setTimeout(() => {
@@ -78,20 +76,22 @@ const PageProvider = ({ children }) => {
 	};
 
 	// update inputs with useReducer
-	const onUserInputChange = (e, prefix = null) => {
-		let name;
+	const onUserInputChange = (e, title = null) => {
+		let key;
 		let newValue;
-		if (!prefix) {
+		const { name, value } = e.target;
+		if (!title) {
 			//input
-			name = e.target.name;
-			newValue = e.target.value;
+			key = name;
+			newValue = value;
 		} else {
 			// dropdown
-			name = prefix;
-			newValue = e.value === 'None' ? '' : e.value;
+			console.log('e.target :', value);
+			key = title;
+			newValue = value === 'None' ? '' : value;
 		}
-		console.log('name', name);
-		setUserInput({ [name]: newValue });
+		console.log('key', key);
+		setUserInput({ [key]: newValue });
 	};
 
 	const setCurrentDate = () => {
