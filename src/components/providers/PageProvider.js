@@ -6,7 +6,7 @@ import { famousCountries } from '../../mockData';
 const PageProvider = ({ children }) => {
 	// Define state & setState with hook
 	// counts currentPage to show questions by each pages
-	const [currentPage, setCurrentPage] = useState(-2);
+	const [currentPage, setCurrentPage] = useState(-1);
 
 	// sets button to disabled when nothing has selected.
 	// const [isSelected, setIsSelected] = useState(false);
@@ -48,12 +48,10 @@ const PageProvider = ({ children }) => {
 
 	// called when the button is clicked
 	const setPageCount = () => {
-		if (currentPage === 14) {
+		if (currentPage === 15) {
 			getTravelType();
 			getCountry();
 			setCurrentDate(); // without form
-			// console.log('travel Type :', travelType);
-		} else if (currentPage === 15) {
 			// getCountry(); without form
 		}
 		setTimeout(() => {
