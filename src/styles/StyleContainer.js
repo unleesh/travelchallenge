@@ -50,6 +50,10 @@ export const QuestionTitleWrapper = styled.div`
 	font-weight: bolder;
 `;
 
+export const VerificationTitleWrapper = styled.div`
+	font-size: 17px;
+`;
+
 export const QuestionTextWrapper = styled.div`
 	font-size: 18px;
 `;
