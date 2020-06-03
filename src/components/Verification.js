@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import PageContext from '../contexts/Page.context';
 import styled from 'styled-components';
+import { mockData_KOR, mockData_ENG } from '../mockData';
 
 const genderOptions = [
 	{ value: 'Mr.', label: 'Mr.' },
@@ -21,8 +22,10 @@ const Verification = () => {
 		onUserInputChange,
 		setPageCount,
 		setCurrentDate,
+		lang,
 	} = useContext(PageContext);
 	const { username, email, title, address } = userInput;
+	const { text } = lang === 'KOR' ? mockData_KOR[16] : mockData_ENG[16];
 
 	return (
 		<FormOuterWrapper>
@@ -32,6 +35,7 @@ const Verification = () => {
 					setCurrentDate();
 					setPageCount();
 				}}>
+				<TitleWrapper>{text}</TitleWrapper>
 				<TextWrapper>Passenger</TextWrapper>
 				<SelectWrapper>
 					<label htmlFor='gender'></label>
@@ -103,6 +107,12 @@ const TextWrapper = styled.div`
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: 20px;
+`;
+
+const TitleWrapper = styled.div`
+	text-align: center;
+	margin: 20px 30px 60px 30px;
+	font-size: 17px;
 `;
 
 const SelectWrapper = styled.div`

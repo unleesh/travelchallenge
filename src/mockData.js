@@ -4,6 +4,7 @@ import {
 	HighlightTextWrapper,
 	QuestionTitleWrapper,
 	QuestionTextWrapper,
+	VerificationTitleWrapper,
 } from './styles/StyleContainer';
 
 export const mockData_KOR = [
@@ -377,6 +378,18 @@ export const mockData_KOR = [
 			</>
 		),
 	},
+	{
+		id: 16,
+		text: (
+			<>
+				<VerificationTitleWrapper>마지막 (가상)티켓 발권과</VerificationTitleWrapper>
+				<VerificationTitleWrapper>자신의 여행유형 확인을 위해</VerificationTitleWrapper>
+				<VerificationTitleWrapper>
+				아래를 입력해 주세요.
+				</VerificationTitleWrapper>
+			</>
+		),
+	},
 ];
 
 export const mockData_ENG = [
@@ -742,6 +755,18 @@ export const mockData_ENG = [
 				<QuestionTitleWrapper>
 				so far from 34 countries below.<br></br>(Scroll down) 
 				</QuestionTitleWrapper>
+			</>
+		),
+	},
+	{
+		id: 16,
+		text: (
+			<>
+				<VerificationTitleWrapper>Finally, to get your (virtual) first class ticket </VerificationTitleWrapper>
+				<VerificationTitleWrapper>and to find your travel type,</VerificationTitleWrapper>
+				<VerificationTitleWrapper>
+				Please fill below
+				</VerificationTitleWrapper>
 			</>
 		),
 	},
