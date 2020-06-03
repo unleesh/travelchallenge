@@ -379,6 +379,363 @@ export const mockData_KOR = [
 	},
 ];
 
+export const mockData_ENG = [
+	{
+		id: 0,
+		text: (
+			<>
+				<TextWrapper>Hello passengers,</TextWrapper>
+				<TextWrapper>
+					It has been too long since we traveled last time because of the virus.
+				</TextWrapper>
+				<br />
+				<TextWrapper>
+					So, we prepared a travel preference test for you.
+				</TextWrapper>
+				<TextWrapper>
+					We hope we travel soon and this test result can help you
+				</TextWrapper>
+				<TextWrapper>to prepare your next journey.</TextWrapper>
+				<TextWrapper>
+					<HighlightTextWrapper border>Find your result</HighlightTextWrapper>{' '}
+					and get your
+				</TextWrapper>
+				<br />
+				<TextWrapper>
+					{' '}
+					<HighlightTextWrapper border>
+						virtual first class ticket!
+					</HighlightTextWrapper>
+				</TextWrapper>
+				<TextWrapper>
+					<HighlightTextWrapper>Bon voyage~!</HighlightTextWrapper>
+				</TextWrapper>
+			</>
+		),
+	},
+	{
+		id: 1,
+		question: (
+			<>
+				<QuestionTitleWrapper>The viruses dead now.</QuestionTitleWrapper>
+				<QuestionTitleWrapper>(Yeah~!) </QuestionTitleWrapper>
+				<QuestionTitleWrapper>Now you can travel.</QuestionTitleWrapper>
+				<QuestionTitleWrapper>How will you?</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<>
+				<QuestionTextWrapper>Already have a bucket list.</QuestionTextWrapper>
+				<QuestionTextWrapper>I will pick one</QuestionTextWrapper>
+				<QuestionTextWrapper>from the list</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>Alright!</QuestionTextWrapper>
+				<QuestionTextWrapper>I will find a destination</QuestionTextWrapper>
+				<QuestionTextWrapper>from now.</QuestionTextWrapper>
+			</>,
+		],
+	},
+	{
+		id: 2,
+		question: (
+			<>
+				<QuestionTitleWrapper>
+					You are flying to Paris now.
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>It takes 9 hours.</QuestionTitleWrapper>
+				<QuestionTitleWrapper>Which type are you?</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<QuestionTextWrapper>Sleep</QuestionTextWrapper>,
+			<QuestionTextWrapper>Food fighter</QuestionTextWrapper>,
+			<QuestionTextWrapper>Complainning</QuestionTextWrapper>,
+			<QuestionTextWrapper>book(movie) mania</QuestionTextWrapper>,
+		],
+	},
+	{
+		id: 3,
+		question: (
+			<>
+				<QuestionTitleWrapper>
+					You've arrived at Heathrow Airport.
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>What would you do first?</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<>
+				<QuestionTextWrapper>
+					go to London eye, Tower Bridge etc.
+				</QuestionTextWrapper>
+				<QuestionTextWrapper>exploring famous spots</QuestionTextWrapper>
+			</>,
+			<QuestionTextWrapper>get my USIM first</QuestionTextWrapper>,
+			<>
+				<QuestionTextWrapper>
+					go to hotel and take some reset
+				</QuestionTextWrapper>
+			</>,
+		],
+	},
+	{
+		id: 4,
+		question: (
+			<>
+				<QuestionTitleWrapper>Now you are in Rome.</QuestionTitleWrapper>
+				<QuestionTitleWrapper>How would you travel?</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<>
+				<QuestionTextWrapper>I want to go popular spots</QuestionTextWrapper>
+				<QuestionTextWrapper>where I haven't went</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>
+					I will finish my planned schedule
+				</QuestionTextWrapper>
+				<QuestionTextWrapper>and take a rest</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>No special plans.</QuestionTextWrapper>
+				<QuestionTextWrapper>I'd rather to follow the mood</QuestionTextWrapper>
+			</>,
+		],
+	},
+	{
+		id: 5,
+		question: (
+			<>
+				<QuestionTitleWrapper>
+					You are climbing to Jungfrau now.
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>
+					Which one is close your type?
+				</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<>
+				<QuestionTextWrapper>I will go to the top</QuestionTextWrapper>
+				<QuestionTextWrapper>of the mountain</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>
+					middle of the mountain with train is ok to me.{' '}
+				</QuestionTextWrapper>
+				<QuestionTextWrapper>
+					Let's take photos for instagram.
+				</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>Mountain is not on my list.</QuestionTextWrapper>
+				<QuestionTextWrapper>
+					Just give me my Lindt chocolate.
+				</QuestionTextWrapper>
+			</>,
+		],
+	},
+	{
+		id: 6,
+		question: (
+			<QuestionTitleWrapper>
+				I usually do a role when travel
+			</QuestionTitleWrapper>
+		),
+		choices: [
+			<QuestionTextWrapper>Navigator</QuestionTextWrapper>,
+			<QuestionTextWrapper>Entertainer</QuestionTextWrapper>,
+			<QuestionTextWrapper>Gourmet finder</QuestionTextWrapper>,
+		],
+	},
+	{
+		id: 7,
+		question: (
+			<>
+				<QuestionTitleWrapper>
+					Today, we go to Vatican city!{' '}
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>You travel</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<QuestionTextWrapper>go early and explore slowly</QuestionTextWrapper>,
+			<QuestionTextWrapper>
+				guide group tour or with friends
+			</QuestionTextWrapper>,
+			<QuestionTextWrapper>run to the "Creation of Adam"</QuestionTextWrapper>,
+		],
+	},
+	{
+		id: 8,
+		question: (
+			<>
+				<QuestionTitleWrapper>In Tokyo, you decided to go</QuestionTitleWrapper>
+				<QuestionTitleWrapper>to Ramen place.</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<QuestionTextWrapper>Absolutely Ramen is Ichiran~</QuestionTextWrapper>,
+			<>
+				<QuestionTextWrapper>Open google map</QuestionTextWrapper>
+				<QuestionTextWrapper>
+					and find a close Ramen restaurant
+				</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>Say "Let's eat Sushi"</QuestionTextWrapper>
+				<QuestionTextWrapper>Sushi"</QuestionTextWrapper>
+			</>,
+		],
+	},
+	{
+		id: 9,
+		question: (
+			<>
+				<QuestionTitleWrapper>
+					Photo is all about travel actually.
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>What's your type?</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<>
+				<QuestionTextWrapper>More photos always better.</QuestionTextWrapper>
+				<QuestionTextWrapper>I want to go to travel</QuestionTextWrapper>
+				<QuestionTextWrapper>who can take me photos</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>I rather to focus on my trip.</QuestionTextWrapper>
+				<QuestionTextWrapper> I don't mind taking</QuestionTextWrapper>
+				<QuestionTextWrapper>someone else's photo</QuestionTextWrapper>
+			</>,
+		],
+	},
+	{
+		id: 10,
+		question: (
+			<>
+				<QuestionTitleWrapper>
+					You have to cross the 8 lanes of crosswalk
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>in Hochiminh city. You?</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<>
+				<QuestionTextWrapper>I can cross the road</QuestionTextWrapper>
+				<QuestionTextWrapper> like a local</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>I Wait.</QuestionTextWrapper>
+				<QuestionTextWrapper>Some day I will cross...</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>Call Grab</QuestionTextWrapper>
+			</>,
+		],
+	},
+	{
+		id: 11,
+		question: (
+			<>
+				<QuestionTitleWrapper>
+					In Shanghai, you find a good item to buy.
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>Cheap and nice. You?</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<QuestionTextWrapper>
+				Nice chance. buy as many as I can
+			</QuestionTextWrapper>,
+			<QuestionTextWrapper>
+				Thinking how I can sell this to my country
+			</QuestionTextWrapper>,
+			<QuestionTextWrapper>doubt "Too cheap to be true?"</QuestionTextWrapper>,
+		],
+	},
+	{
+		id: 12,
+		question: (
+			<>
+				<QuestionTitleWrapper>
+					You will live a month in Seoul.
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>How will you?</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<>
+				<QuestionTextWrapper>I will stay in the downtown</QuestionTextWrapper>
+				<QuestionTextWrapper>and find a career chance</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>Go to Itewon and </QuestionTextWrapper>
+				<QuestionTextWrapper>CHILL with other foreigners</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>go to other cities</QuestionTextWrapper>
+				<QuestionTextWrapper>and explore nature.</QuestionTextWrapper>
+			</>,
+		],
+	},
+	{
+		id: 13,
+		question: (
+			<>
+				<QuestionTitleWrapper>You've earned $500</QuestionTitleWrapper>
+				<QuestionTitleWrapper>at the Casino, Las Vegas.</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<QuestionTextWrapper>bet to the $5000</QuestionTextWrapper>,
+			<QuestionTextWrapper>
+				reserve a dreamed MICHELIN Restaurant
+			</QuestionTextWrapper>,
+			<QuestionTextWrapper>give tips to friends</QuestionTextWrapper>,
+		],
+	},
+	{
+		id: 14,
+		question: (
+			<>
+				<QuestionTitleWrapper>
+					Finally, you are coming home.{' '}
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>In a airplane,</QuestionTitleWrapper>
+				<QuestionTitleWrapper>who is next you?</QuestionTitleWrapper>
+			</>
+		),
+		choices: [
+			<>
+				<QuestionTextWrapper>My family or friends</QuestionTextWrapper>
+			</>,
+			<>
+				<QuestionTextWrapper>a stranger. I travel alone.</QuestionTextWrapper>
+			</>,
+		],
+	},
+	{
+		id: 15,
+		text: (
+			<>
+				<QuestionTitleWrapper>
+					We hope you had a great journey with us!
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>
+					Lastly, please select countries you actually traveled
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>
+					so far from 34 countries below.<br></br>(Scroll down)
+				</QuestionTitleWrapper>
+			</>
+		),
+	},
+];
+
 export const mockCountries = [
 	{
 		abvName: 'FRA',
@@ -544,16 +901,16 @@ export const famousCountries = [
 		name: 'usa',
 	},
 	{
+		abvName: 'MCU',
+		name: 'macau',
+	},
+	{
 		abvName: 'USA2',
 		name: 'usa2',
 	},
 	{
 		abvName: 'ESP',
 		name: 'spain',
-	},
-	{
-		abvName: 'HKG',
-		name: 'hongkong',
 	},
 	{
 		abvName: 'UAE',

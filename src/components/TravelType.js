@@ -1,22 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TravelType = ({ travelType }) => {
+const TravelType = ({ lang, travelType }) => {
+	const travelType_lang =
+		lang === 'KOR'
+			? require(`../Imgs/여행자_유형/${travelType}.png`)
+			: require(`../Imgs/여행자_유형_영문/${travelType}_en.png`);
 	return (
 		<TravelTypeWrapper>
 			<TravelTypeImgWrapper
 				src={require(`../Imgs/ticket_icons/traveltype_background.png`)}
 				alt=''
 			/>
-			<TypeTextImgWrapper
-				src={require(`../Imgs/여행자_유형/${travelType}.png`)}
-				// src={require(`../Imgs/여행자_유형_영문/플렉스_en.png`)}
-				alt=''
-			/>
+			<TypeTextImgWrapper src={travelType_lang} alt='' />
 			<StampImgWrapper src={require(`../Imgs/ticket_icons/stamp.png`)} alt='' />
 		</TravelTypeWrapper>
 	);
 };
+
 
 const TravelTypeWrapper = styled.div`
 	display: flex;

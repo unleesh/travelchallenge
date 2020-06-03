@@ -93,6 +93,7 @@ const StartBtn = styled.button`
 	/* Adapt the colors based on primary prop */
 	background-color: rgba(249, 180, 56, 1);
 	color: white;
+	font-family: 'AxiaStencilLight';
 	font-size: 0.5em;
 	margin: 5% auto 10%;
 	padding: 5px 10px 5px 10px;

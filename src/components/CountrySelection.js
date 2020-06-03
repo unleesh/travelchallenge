@@ -1,11 +1,11 @@
 import React from 'react';
 import Country from './Country';
-import { mockData_KOR, mockCountries } from '../mockData';
+import { mockData_KOR, mockData_ENG, mockCountries } from '../mockData';
 import styled from 'styled-components';
 
 const CountrySelection = ({ setPageCount, lang }) => {
 	// 뒤의 조건은 영어로 변경 필요
-	const { text } = lang === 'KOR' ? mockData_KOR[15] : mockData_KOR[15];
+	const { text } = lang === 'KOR' ? mockData_KOR[15] : mockData_ENG[15];
 
 	return (
 		<CountrySelectionWrapper>
@@ -25,6 +25,7 @@ const CountrySelectionWrapper = styled.div`
 	flex-direction: column;
 	text-align: center;
 	margin-top: auto;
+	font-family: 'Nanum';
 `;
 
 const CountryTitleWrapper = styled.div`
@@ -43,6 +44,7 @@ const Button = styled.button`
 	/* Adapt the colors based on primary prop */
 	background-color: white;
 	color: rgba(29, 188, 165, 1);
+	font-family: 'AxiaStencilLight';
 	font-size: 1em;
 	margin: 5% auto 10%;
 	display: block;
