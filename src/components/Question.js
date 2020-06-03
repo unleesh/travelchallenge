@@ -36,7 +36,7 @@ const QuestionPageWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-family: 'Nanum';
+	font-family: 'Nanum Pen Script', cursive;
 	font-size: 20px;
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;

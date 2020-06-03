@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { createGlobalStyle } from 'styled-components';
 import App from './App';
 import './styles/global.css';
-import Nanum from './styles/fonts/Nanum.ttf';
 import AxiaStencilLight from './styles/fonts/axia-stencil-light/AxiaStencilLight.otf';
 
 const GlobalStyle = createGlobalStyle`
@@ -14,12 +13,6 @@ const GlobalStyle = createGlobalStyle`
     border: none;
 		cursor: default;
 		color: rgba(255,255,255,1);
-    @font-face {
-      font-family: 'Nanum';
-      src: url(${Nanum});format('ttf');
-      font-style: normal;
-      font-display: auto;
-    }
     @font-face {
       font-family: 'AxiaStencilLight';
       src: url(${AxiaStencilLight});format('otf');

@@ -11,8 +11,11 @@ export const CardContainer = styled.div`
 	position: absolute;
 	width: 336.128px;
 	height: 575.291px;
-	// top: 120.432px;
-	top: 30px;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 	align-self: center;
 	overflow: visible;
 	border-radius: 15px;
@@ -47,7 +50,7 @@ export const HighlightTextWrapper = styled.span`
 
 export const QuestionTitleWrapper = styled.div`
 	font-size: 21px;
-	font-weight: bolder;
+	// font-weight: bolder;
 `;
 
 export const VerificationTitleWrapper = styled.div`
