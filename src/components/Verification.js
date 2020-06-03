@@ -38,21 +38,18 @@ const Verification = () => {
 				<TitleWrapper>{text}</TitleWrapper>
 				<TextWrapper>Passenger</TextWrapper>
 				<SelectWrapper>
-					<label htmlFor='gender'></label>
-					<GenderInputWrapper
-						placeholder='title'
-						list='genders'
+					<Select
+						id='genders'
 						name='gender'
-						id='gender'
+						onChange={(e) => onUserInputChange(e, 'title')}>
 						value={title}
-						required
-						onChange={(e) => onUserInputChange(e, 'title')}
-					/>
-					<datalist id='genders'>
 						{genderOptions.map((item, key) => (
-							<option value={item.value} key={`gender_${key}`} />
+							<option value={item.value} key={`gender_${key}`}>
+								{item.value}
+							</option>
 						))}
-					</datalist>
+					</Select>
+					{/* </datalist> */}
 					<InputWrapper
 						placeholder='Your name'
 						type='text'
@@ -132,8 +129,9 @@ const InputWrapper = styled.input`
 	margin-right: 3px;
 `;
 
-const GenderInputWrapper = styled.input`
+const Select = styled.select`
 	width: 30%;
+	background-color: white;
 	color: black;
 	border-radius: 20px;
 	text-align: center;
