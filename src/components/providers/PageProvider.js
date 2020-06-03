@@ -24,7 +24,7 @@ const PageProvider = ({ children }) => {
 	const [userInput, setUserInput] = useReducer(
 		(state, newState) => ({ ...state, ...newState }),
 		{
-			title: '',
+			title: 'Mr.',
 			username: '',
 			email: '',
 			address: '',
