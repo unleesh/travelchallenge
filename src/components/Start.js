@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import airplane from '../Imgs/svg/airplane.svg';
 import bottom from '../Imgs/svg/bottom.svg';
+import nation from '../Imgs/gifs/nation.gif';
 import covid19 from '../Imgs/svg/covid19.svg';
 import travelmonday from '../Imgs/svg/travelmonday.png';
 import styled from 'styled-components';
@@ -20,6 +21,7 @@ const Start = () => {
 			<BottomSVGWrapper>
 				<AirplaneWrapper src={airplane} alt='' />
 				<BottomWrapper src={bottom} alt='' />
+				<BottomWrapper nation='nation' src={nation} alt='' />
 				<StartBtnWrapper>
 					<StartBtn value='KOR' onClick={(e) => setLangOpt(e)}>
 						KOREAN
@@ -36,8 +38,6 @@ const Start = () => {
 const SVGWrapper = styled.div`
 	display: flex;
 	flex-direction: column;
-	z-index: ;
-	poistion: ;
 `;
 
 const BottomSVGWrapper = styled.div`
@@ -78,6 +78,7 @@ const BottomWrapper = styled.img`
 	width: 100%;
 	bottom: 0px;
 	left: 0px;
+	height: ${(props) => (props.nation ? '65px' : '')};
 `;
 
 const StartBtnWrapper = styled.div`
@@ -100,9 +101,12 @@ const StartBtn = styled.button`
 	display: flex;
 	width: 100%;
 	border-radius: 20px;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 `;
 
 export default Start;

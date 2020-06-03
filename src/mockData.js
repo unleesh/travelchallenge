@@ -686,7 +686,7 @@ export const mockData_ENG = [
 				<QuestionTextWrapper>and find a career chance</QuestionTextWrapper>
 			</>,
 			<>
-				<QuestionTextWrapper>Go to Itewon and </QuestionTextWrapper>
+				<QuestionTextWrapper>Go to Itaewon and </QuestionTextWrapper>
 				<QuestionTextWrapper>CHILL with other foreigners</QuestionTextWrapper>
 			</>,
 			<>
@@ -764,139 +764,139 @@ export const mockData_ENG = [
 export const mockCountries = [
 	{
 		abvName: 'FRA',
-		name: 'france',
+		name: 'France',
 	},
 	{
 		abvName: 'KOR',
-		name: 'korea',
+		name: 'Korea',
 	},
 	{
 		abvName: 'ITA',
-		name: 'italy',
+		name: 'Italy',
 	},
 	{
 		abvName: 'JPN',
-		name: 'japan',
+		name: 'Japan',
 	},
 	{
 		abvName: 'CHN',
-		name: 'china',
+		name: 'China',
 	},
 	{
 		abvName: 'USA',
-		name: 'usa',
+		name: 'USA',
 	},
 	{
 		abvName: 'GRE',
-		name: 'greece',
+		name: 'Greece',
 	},
 	{
 		abvName: 'ESP',
-		name: 'spain',
+		name: 'Spain',
 	},
 	{
 		abvName: 'SUI',
-		name: 'swiss',
+		name: 'Swiss',
 	},
 	{
 		abvName: 'HKG',
-		name: 'hongkong',
+		name: 'Hongkong',
 	},
 	{
 		abvName: 'UAE',
-		name: 'uae',
+		name: 'UAE',
 	},
 	{
 		abvName: 'UK',
-		name: 'uk',
+		name: 'UK',
 	},
 	{
 		abvName: 'RUS',
-		name: 'russia',
+		name: 'Russia',
 	},
 	{
 		abvName: 'BRA',
-		name: 'brazil',
+		name: 'Brazil',
 	},
 	{
 		abvName: 'TUR',
-		name: 'turkey',
+		name: 'Turkey',
 	},
 	{
 		abvName: 'EGY',
-		name: 'egypt',
+		name: 'Egypt',
 	},
 	{
 		abvName: 'SIN',
-		name: 'singapore',
+		name: 'Singapore',
 	},
 	{
 		abvName: 'CAN',
-		name: 'canada',
+		name: 'Canada',
 	},
 	{
 		abvName: 'CZE',
-		name: 'czech',
+		name: 'Czech',
 	},
 	{
 		abvName: 'INA',
-		name: 'indonesia',
+		name: 'Indonesia',
 	},
 	{
 		abvName: 'AUS',
-		name: 'australia',
+		name: 'Australia',
 	},
 	{
 		abvName: 'AUT',
-		name: 'austria',
+		name: 'Austria',
 	},
 	{
 		abvName: 'DEN',
-		name: 'denmark',
+		name: 'Denmark',
 	},
 	{
 		abvName: 'GER',
-		name: 'germany',
+		name: 'Germany',
 	},
 	{
 		abvName: 'LUX',
-		name: 'luxembourg',
+		name: 'Luxembourg',
 	},
 	{
 		abvName: 'MYS',
-		name: 'malaysia',
+		name: 'Malaysia',
 	},
 	{
 		abvName: 'MEX',
-		name: 'mexico',
+		name: 'Mexico',
 	},
 	{
 		abvName: 'NED',
-		name: 'netherlands',
+		name: 'Netherlands',
 	},
 	{
 		abvName: 'NZL',
-		name: 'newzealand',
+		name: 'Newzealand',
 	},
 	{
 		abvName: 'NOR',
-		name: 'norway',
+		name: 'Norway',
 	},
 	{
 		abvName: 'POL',
-		name: 'poland',
+		name: 'Poland',
 	},
 	{
 		abvName: 'POR',
-		name: 'portugal',
+		name: 'Portugal',
 	},
 	{
 		abvName: 'SWE',
-		name: 'sweden',
+		name: 'Sweden',
 	},
 	{
 		abvName: 'THA',
-		name: 'thailand',
+		name: 'Thailand',
 	},
 ];
 
