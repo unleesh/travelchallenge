@@ -25,7 +25,7 @@ const CountrySelectionWrapper = styled.div`
 	flex-direction: column;
 	text-align: center;
 	margin-top: auto;
-	font-family: 'Nanum';
+	font-family: 'Nanum Pen Script', cursive;
 `;
 
 const CountryTitleWrapper = styled.div`
