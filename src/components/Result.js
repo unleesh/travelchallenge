@@ -10,6 +10,7 @@ const Result = () => {
 		country,
 	} = useContext(PageContext);
 	const nameWithTitle = `${title} ${username}`;
+	const icon = country === 'usa2' ? 'usa' : country;
 	return (
 		<TicketOuterWrapper>
 			<TicketWrapper>
@@ -30,7 +31,7 @@ const Result = () => {
 					alt=''
 				/>
 				<IconNationWrapper
-					src={require(`../Imgs/icon_nation/${country}_.png`)}
+					src={require(`../Imgs/icon_nation/${icon}_.png`)}
 					alt=''
 				/>
 			</IconNationOuterWrapper>

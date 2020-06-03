@@ -117,7 +117,9 @@ const PageProvider = ({ children }) => {
 		if (type === '1200' || type === '1100') {
 			lang === 'KOR' ? setTravelType('텐션몰빵') : setTravelType('energizer');
 		} else if (type === '1211') {
-			lang === 'KOR' ? setTravelType('방랑의 민족') : setTravelType('wanderlust');
+			lang === 'KOR'
+				? setTravelType('방랑의 민족')
+				: setTravelType('wanderlust');
 		} else if (type === '1111' || type === '1101') {
 			lang === 'KOR' ? setTravelType('자연인') : setTravelType('nature seeker');
 		} else if (type === '1000') {
@@ -133,15 +135,21 @@ const PageProvider = ({ children }) => {
 		} else if (type === '0101') {
 			lang === 'KOR' ? setTravelType('덕후') : setTravelType('geek');
 		} else if (type === '0100' || type === '0110') {
-			lang === 'KOR' ? setTravelType('레저킹') : setTravelType('world explorer');
+			lang === 'KOR'
+				? setTravelType('레저킹')
+				: setTravelType('world explorer');
 		} else if (type === '0001') {
-			lang === 'KOR' ? setTravelType('여행 미슐러') : setTravelType('michelin guide');
+			lang === 'KOR'
+				? setTravelType('여행 미슐러')
+				: setTravelType('michelin guide');
 		} else if (type === '0000' || type === '1201') {
 			lang === 'KOR' ? setTravelType('셀럽') : setTravelType('trend hunter');
 		} else if (type === '1001') {
 			lang === 'KOR' ? setTravelType('나혼자 간다') : setTravelType('Outsider');
 		} else if (type === '0011') {
-			lang === 'KOR' ? setTravelType('프로파일러') : setTravelType('perfectionist');
+			lang === 'KOR'
+				? setTravelType('프로파일러')
+				: setTravelType('perfectionist');
 		} else if (type === '0010') {
 			lang === 'KOR' ? setTravelType('뉴요커2') : setTravelType('city lover');
 		}
@@ -154,7 +162,6 @@ const PageProvider = ({ children }) => {
 		const min = 0;
 		const max = famousCountries.length;
 		const randomNum = Math.floor(Math.random() * (max - min)) + min;
-		console.log('country :', famousCountries[randomNum].name);
 		setCountry(famousCountries[randomNum].name);
 	};
 

@@ -385,18 +385,27 @@ export const mockData_ENG = [
 		text: (
 			<>
 				<TextWrapper>Hello passengers,</TextWrapper>
-				<TextWrapper>It has been too long since we traveled last time because of the virus.</TextWrapper>
+				<TextWrapper>
+					It has been too long since we traveled last time because of the virus.
+				</TextWrapper>
 				<br />
-				<TextWrapper>So, we prepared a travel preference test for you.</TextWrapper>
-				<TextWrapper>We hope we travel soon and this test result can help you</TextWrapper>
+				<TextWrapper>
+					So, we prepared a travel preference test for you.
+				</TextWrapper>
+				<TextWrapper>
+					We hope we travel soon and this test result can help you
+				</TextWrapper>
 				<TextWrapper>to prepare your next journey.</TextWrapper>
 				<TextWrapper>
-					<HighlightTextWrapper border>Find your result</HighlightTextWrapper> and get your
+					<HighlightTextWrapper border>Find your result</HighlightTextWrapper>{' '}
+					and get your
 				</TextWrapper>
 				<br />
 				<TextWrapper>
 					{' '}
-					<HighlightTextWrapper border>virtual first class ticket!</HighlightTextWrapper>
+					<HighlightTextWrapper border>
+						virtual first class ticket!
+					</HighlightTextWrapper>
 				</TextWrapper>
 				<TextWrapper>
 					<HighlightTextWrapper>Bon voyage~!</HighlightTextWrapper>
@@ -408,14 +417,10 @@ export const mockData_ENG = [
 		id: 1,
 		question: (
 			<>
-				<QuestionTitleWrapper>
-				The viruses dead now.
-				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>The viruses dead now.</QuestionTitleWrapper>
 				<QuestionTitleWrapper>(Yeah~!) </QuestionTitleWrapper>
 				<QuestionTitleWrapper>Now you can travel.</QuestionTitleWrapper>
-				<QuestionTitleWrapper>
-				How will you?
-				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>How will you?</QuestionTitleWrapper>
 			</>
 		),
 		choices: [
@@ -436,14 +441,10 @@ export const mockData_ENG = [
 		question: (
 			<>
 				<QuestionTitleWrapper>
-				You are flying to Paris now.
+					You are flying to Paris now.
 				</QuestionTitleWrapper>
-				<QuestionTitleWrapper>
-				It takes 9 hours.
-				</QuestionTitleWrapper>
-				<QuestionTitleWrapper>
-				Which type are you?
-				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>It takes 9 hours.</QuestionTitleWrapper>
+				<QuestionTitleWrapper>Which type are you?</QuestionTitleWrapper>
 			</>
 		),
 		choices: [
@@ -458,23 +459,23 @@ export const mockData_ENG = [
 		question: (
 			<>
 				<QuestionTitleWrapper>
-				You've arrived at Heathrow Airport.
+					You've arrived at Heathrow Airport.
 				</QuestionTitleWrapper>
-				<QuestionTitleWrapper>
-				What would you do first?
-				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>What would you do first?</QuestionTitleWrapper>
 			</>
 		),
 		choices: [
 			<>
 				<QuestionTextWrapper>
-				go to London eye, Tower Bridge etc.
+					go to London eye, Tower Bridge etc.
 				</QuestionTextWrapper>
 				<QuestionTextWrapper>exploring famous spots</QuestionTextWrapper>
 			</>,
 			<QuestionTextWrapper>get my USIM first</QuestionTextWrapper>,
 			<>
-				<QuestionTextWrapper>go to hotel and take some reset</QuestionTextWrapper>
+				<QuestionTextWrapper>
+					go to hotel and take some reset
+				</QuestionTextWrapper>
 			</>,
 		],
 	},
@@ -483,9 +484,7 @@ export const mockData_ENG = [
 		question: (
 			<>
 				<QuestionTitleWrapper>Now you are in Rome.</QuestionTitleWrapper>
-				<QuestionTitleWrapper>
-				How would you travel?
-				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>How would you travel?</QuestionTitleWrapper>
 			</>
 		),
 		choices: [
@@ -495,15 +494,13 @@ export const mockData_ENG = [
 			</>,
 			<>
 				<QuestionTextWrapper>
-				I will finish my planned schedule
+					I will finish my planned schedule
 				</QuestionTextWrapper>
 				<QuestionTextWrapper>and take a rest</QuestionTextWrapper>
 			</>,
 			<>
 				<QuestionTextWrapper>No special plans.</QuestionTextWrapper>
-				<QuestionTextWrapper>
-				I'd rather to follow the mood
-				</QuestionTextWrapper>
+				<QuestionTextWrapper>I'd rather to follow the mood</QuestionTextWrapper>
 			</>,
 		],
 	},
@@ -512,29 +509,31 @@ export const mockData_ENG = [
 		question: (
 			<>
 				<QuestionTitleWrapper>
-				You are climbing to Jungfrau now.
+					You are climbing to Jungfrau now.
 				</QuestionTitleWrapper>
 				<QuestionTitleWrapper>
-				Which one is close your type?
+					Which one is close your type?
 				</QuestionTitleWrapper>
 			</>
 		),
 		choices: [
 			<>
-				<QuestionTextWrapper>
-				I will go to the top
-				</QuestionTextWrapper>
-				<QuestionTextWrapper>
-				of the mountain
-				</QuestionTextWrapper>
+				<QuestionTextWrapper>I will go to the top</QuestionTextWrapper>
+				<QuestionTextWrapper>of the mountain</QuestionTextWrapper>
 			</>,
 			<>
-				<QuestionTextWrapper>middle of the mountain with train is ok to me. </QuestionTextWrapper>
-				<QuestionTextWrapper>Let's take photos for instagram.</QuestionTextWrapper>
+				<QuestionTextWrapper>
+					middle of the mountain with train is ok to me.{' '}
+				</QuestionTextWrapper>
+				<QuestionTextWrapper>
+					Let's take photos for instagram.
+				</QuestionTextWrapper>
 			</>,
 			<>
 				<QuestionTextWrapper>Mountain is not on my list.</QuestionTextWrapper>
-				<QuestionTextWrapper>Just give me my Lindt chocolate.</QuestionTextWrapper>
+				<QuestionTextWrapper>
+					Just give me my Lindt chocolate.
+				</QuestionTextWrapper>
 			</>,
 		],
 	},
@@ -542,7 +541,7 @@ export const mockData_ENG = [
 		id: 6,
 		question: (
 			<QuestionTitleWrapper>
-				 I usually do a role when travel
+				I usually do a role when travel
 			</QuestionTitleWrapper>
 		),
 		choices: [
@@ -555,15 +554,17 @@ export const mockData_ENG = [
 		id: 7,
 		question: (
 			<>
-				<QuestionTitleWrapper>Today, we go to Vatican city! </QuestionTitleWrapper>
 				<QuestionTitleWrapper>
-				You travel
+					Today, we go to Vatican city!{' '}
 				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>You travel</QuestionTitleWrapper>
 			</>
 		),
 		choices: [
 			<QuestionTextWrapper>go early and explore slowly</QuestionTextWrapper>,
-			<QuestionTextWrapper>guide group tour or with friends</QuestionTextWrapper>,
+			<QuestionTextWrapper>
+				guide group tour or with friends
+			</QuestionTextWrapper>,
 			<QuestionTextWrapper>run to the "Creation of Adam"</QuestionTextWrapper>,
 		],
 	},
@@ -571,9 +572,7 @@ export const mockData_ENG = [
 		id: 8,
 		question: (
 			<>
-				<QuestionTitleWrapper>
-				In Tokyo, you decided to go
-				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>In Tokyo, you decided to go</QuestionTitleWrapper>
 				<QuestionTitleWrapper>to Ramen place.</QuestionTitleWrapper>
 			</>
 		),
@@ -582,7 +581,7 @@ export const mockData_ENG = [
 			<>
 				<QuestionTextWrapper>Open google map</QuestionTextWrapper>
 				<QuestionTextWrapper>
-				and find a close Ramen restaurant
+					and find a close Ramen restaurant
 				</QuestionTextWrapper>
 			</>,
 			<>
@@ -596,25 +595,19 @@ export const mockData_ENG = [
 		question: (
 			<>
 				<QuestionTitleWrapper>
-				Photo is all about travel actually.
+					Photo is all about travel actually.
 				</QuestionTitleWrapper>
-				<QuestionTitleWrapper>
-				What's your type?
-				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>What's your type?</QuestionTitleWrapper>
 			</>
 		),
 		choices: [
 			<>
 				<QuestionTextWrapper>More photos always better.</QuestionTextWrapper>
 				<QuestionTextWrapper>I want to go to travel</QuestionTextWrapper>
-				<QuestionTextWrapper>
-				who can take me photos
-				</QuestionTextWrapper>
+				<QuestionTextWrapper>who can take me photos</QuestionTextWrapper>
 			</>,
 			<>
-				<QuestionTextWrapper>
-				I rather to focus on my trip.
-				</QuestionTextWrapper>
+				<QuestionTextWrapper>I rather to focus on my trip.</QuestionTextWrapper>
 				<QuestionTextWrapper> I don't mind taking</QuestionTextWrapper>
 				<QuestionTextWrapper>someone else's photo</QuestionTextWrapper>
 			</>,
@@ -625,7 +618,7 @@ export const mockData_ENG = [
 		question: (
 			<>
 				<QuestionTitleWrapper>
-				You have to cross the 8 lanes of crosswalk
+					You have to cross the 8 lanes of crosswalk
 				</QuestionTitleWrapper>
 				<QuestionTitleWrapper>in Hochiminh city. You?</QuestionTitleWrapper>
 			</>
@@ -649,7 +642,7 @@ export const mockData_ENG = [
 		question: (
 			<>
 				<QuestionTitleWrapper>
-				In Shanghai, you find a good item to buy.
+					In Shanghai, you find a good item to buy.
 				</QuestionTitleWrapper>
 				<QuestionTitleWrapper>Cheap and nice. You?</QuestionTitleWrapper>
 			</>
@@ -669,7 +662,7 @@ export const mockData_ENG = [
 		question: (
 			<>
 				<QuestionTitleWrapper>
-				You will live a month in Seoul.
+					You will live a month in Seoul.
 				</QuestionTitleWrapper>
 				<QuestionTitleWrapper>How will you?</QuestionTitleWrapper>
 			</>
@@ -677,9 +670,7 @@ export const mockData_ENG = [
 		choices: [
 			<>
 				<QuestionTextWrapper>I will stay in the downtown</QuestionTextWrapper>
-				<QuestionTextWrapper>
-				and find a career chance
-				</QuestionTextWrapper>
+				<QuestionTextWrapper>and find a career chance</QuestionTextWrapper>
 			</>,
 			<>
 				<QuestionTextWrapper>Go to Itewon and </QuestionTextWrapper>
@@ -704,32 +695,26 @@ export const mockData_ENG = [
 			<QuestionTextWrapper>
 				reserve a dreamed MICHELIN Restaurant
 			</QuestionTextWrapper>,
-			<QuestionTextWrapper>
-				give tips to friends
-			</QuestionTextWrapper>,
+			<QuestionTextWrapper>give tips to friends</QuestionTextWrapper>,
 		],
 	},
 	{
 		id: 14,
 		question: (
 			<>
-				<QuestionTitleWrapper>Finally, you are coming home. </QuestionTitleWrapper>
 				<QuestionTitleWrapper>
-				In a airplane,
+					Finally, you are coming home.{' '}
 				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>In a airplane,</QuestionTitleWrapper>
 				<QuestionTitleWrapper>who is next you?</QuestionTitleWrapper>
 			</>
 		),
 		choices: [
 			<>
-				<QuestionTextWrapper>
-				My family or friends
-				</QuestionTextWrapper>
+				<QuestionTextWrapper>My family or friends</QuestionTextWrapper>
 			</>,
 			<>
-				<QuestionTextWrapper>
-				a stranger. I travel alone. 
-				</QuestionTextWrapper>
+				<QuestionTextWrapper>a stranger. I travel alone.</QuestionTextWrapper>
 			</>,
 		],
 	},
@@ -737,10 +722,14 @@ export const mockData_ENG = [
 		id: 15,
 		text: (
 			<>
-				<QuestionTitleWrapper>We hope you had a great journey with us!</QuestionTitleWrapper>
-				<QuestionTitleWrapper>Lastly, please select countries you actually traveled</QuestionTitleWrapper>
 				<QuestionTitleWrapper>
-				so far from 34 countries below.<br></br>(Scroll down) 
+					We hope you had a great journey with us!
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>
+					Lastly, please select countries you actually traveled
+				</QuestionTitleWrapper>
+				<QuestionTitleWrapper>
+					so far from 34 countries below.<br></br>(Scroll down)
 				</QuestionTitleWrapper>
 			</>
 		),
@@ -912,16 +901,16 @@ export const famousCountries = [
 		name: 'usa',
 	},
 	{
+		abvName: 'MCU',
+		name: 'macau',
+	},
+	{
 		abvName: 'USA2',
 		name: 'usa2',
 	},
 	{
 		abvName: 'ESP',
 		name: 'spain',
-	},
-	{
-		abvName: 'HKG',
-		name: 'hongkong',
 	},
 	{
 		abvName: 'UAE',
