@@ -16,13 +16,13 @@ const GlobalStyle = createGlobalStyle`
 		color: rgba(255,255,255,1);
     @font-face {
       font-family: 'Nanum';
-      src: url(${Nanum});format('truetype');
+      src: url(${Nanum});format('ttf');
       font-style: normal;
       font-display: auto;
     }
     @font-face {
       font-family: 'AxiaStencilLight';
-      src: url(${AxiaStencilLight});format('truetype');
+      src: url(${AxiaStencilLight});format('otf');
       font-style: normal;
       font-display: auto;
     }
