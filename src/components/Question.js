@@ -74,15 +74,4 @@ const QuestionCounter = styled.div`
 }
 `;
 
-// const Button = styled.button`
-// 	padding: 10px 15px;
-// 	margin: 0 5px;
-// 	border: none;
-// 	border-radius: 5px;
-// 	// need to be fixed to change color when the btn is clicked
-// 	background-color: ${(props) => props.btnColor || 'blue'};
-// 	color: #ffffff;
-// 	font-size: 15pt;
-// `;
-
 export default Question;
