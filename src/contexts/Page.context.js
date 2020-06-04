@@ -15,6 +15,8 @@ const PageContext = createContext({
 	selectCountry: () => {},
 	getCountry: () => {},
 	getTravelType: () => {},
+	disabled: false,
+	setDisabled: () => {},
 });
 
 export default PageContext;
