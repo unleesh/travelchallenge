@@ -120,7 +120,15 @@ const TicketTextOuterWrapper = styled.div`
 `;
 
 const TicketTextWrapper = styled.div`
-	font-size: ${(props) => (props.name > 20 ? '8px' : '10px')};
+	font-size: ${(props) => {
+		if (props.name > 25) {
+			return '6px';
+		} else if (props.name > 20) {
+			return '8px';
+		} else {
+			return '10px';
+		}
+	}};
 	color: black;
 	margin-top: 13px;
 `;
