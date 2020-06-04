@@ -28,6 +28,7 @@ export const CardContainer = styled.div`
 `;
 
 export const TextWrapper = styled.div`
+	font-family: 'Jua', sans-serif;
 	font-size: 12px;
 	text-align: center;
 	color: black;
@@ -50,11 +51,12 @@ export const HighlightTextWrapper = styled.span`
 
 export const QuestionTitleWrapper = styled.div`
 	font-size: 21px;
-	// font-weight: bolder;
+	font-family: 'Jua', sans-serif;
 `;
 
 export const VerificationTitleWrapper = styled.div`
 	font-size: 17px;
+	font-family: 'Jua', sans-serif;
 `;
 
 export const QuestionTextWrapper = styled.div`
