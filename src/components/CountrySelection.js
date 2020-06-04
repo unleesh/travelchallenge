@@ -50,6 +50,7 @@ const Button = styled.button`
 	display: block;
 	width: 25%;
 	border-radius: 20px;
+	outline: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;

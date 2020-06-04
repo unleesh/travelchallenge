@@ -51,7 +51,6 @@ const Verification = () => {
 							</option>
 						))}
 					</Select>
-					{/* </datalist> */}
 					<InputWrapper
 						id='nameField'
 						placeholder='Your name'
@@ -132,6 +131,7 @@ const InputWrapper = styled.input`
 	padding: 8px;
 	margin-left: 3px;
 	margin-right: 3px;
+	outline: none;
 `;
 
 const Select = styled.select`
@@ -144,6 +144,7 @@ const Select = styled.select`
 	padding: 7px;
 	margin-left: 3px;
 	margin-right: 3px;
+	outline: none;
 `;
 
 const Input = styled.input`
@@ -156,6 +157,7 @@ const Input = styled.input`
 	display: block;
 	width: 35%;
 	border-radius: 20px;
+	outline: none;
 `;
 
 export default Verification;
