@@ -83,6 +83,7 @@ const Verification = () => {
 							id='addressField'
 							value={address}
 							required
+							pattern='@([a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z])'
 							onChange={(e) => onUserInputChange(e, 'address')}
 						/>
 						<datalist id='addresses'>
