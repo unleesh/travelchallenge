@@ -13,13 +13,15 @@ const TravelType = ({ lang, travelType }) => {
 				alt=''
 			/>
 			<TypeTextImgWrapper src={travelType_lang} alt='' />
-			<a href="https://www.facebook.com/travelmondayofficial" target='blank'>
-			<StampImgWrapper src={require(`../Imgs/ticket_icons/stamp.png`)} alt=''/>
+			<a href='https://www.facebook.com/travelmondayofficial' target='blank'>
+				<StampImgWrapper
+					src={require(`../Imgs/ticket_icons/stamp.png`)}
+					alt=''
+				/>
 			</a>
 		</TravelTypeWrapper>
 	);
 };
-
 
 const TravelTypeWrapper = styled.div`
 	display: flex;

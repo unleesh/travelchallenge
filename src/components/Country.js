@@ -53,7 +53,7 @@ const ImgWrapper = styled.img`
 const ImgText = styled.div`
 	display: flex;
 	position: absolute;
-	font-size: smaller;
+	font-size: 15px;
 	margin-top: 9px;
 	padding: 0px 5px 3px 5px;
 	color: ${(props) =>

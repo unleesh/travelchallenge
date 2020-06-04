@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import PageContext from '../contexts/Page.context';
 import styled from 'styled-components';
 import { mockData_KOR, mockData_ENG } from '../mockData';
@@ -22,6 +22,7 @@ const Verification = () => {
 		onUserInputChange,
 		setPageCount,
 		setCurrentDate,
+		postToGoogle,
 		lang,
 	} = useContext(PageContext);
 	const { username, email, title, address } = userInput;
@@ -34,12 +35,13 @@ const Verification = () => {
 					e.preventDefault();
 					setCurrentDate();
 					setPageCount();
+					postToGoogle();
 				}}>
 				<TitleWrapper>{text}</TitleWrapper>
 				<TextWrapper>Passenger</TextWrapper>
 				<SelectWrapper>
 					<Select
-						id='genders'
+						id='genderField'
 						name='gender'
 						onChange={(e) => onUserInputChange(e, 'title')}>
 						value={title}
@@ -51,6 +53,7 @@ const Verification = () => {
 					</Select>
 					{/* </datalist> */}
 					<InputWrapper
+						id='nameField'
 						placeholder='Your name'
 						type='text'
 						name='username'
@@ -64,6 +67,7 @@ const Verification = () => {
 					<TextWrapper>E-mail</TextWrapper>
 					<SelectWrapper>
 						<InputWrapper
+							id='emailField'
 							placeholder='email'
 							type='text'
 							name='email'
@@ -76,7 +80,7 @@ const Verification = () => {
 							placeholder='@example.com'
 							list='addresses'
 							name='address'
-							id='address'
+							id='addressField'
 							value={address}
 							required
 							onChange={(e) => onUserInputChange(e, 'address')}
