@@ -167,19 +167,21 @@ const PageProvider = ({ children }) => {
 	};
 
 	const postToGoogle = () => {
-		var field0 = $("genderField").val();
+		var field0 = $("#genderField").val();
 		var field1 = $("#nameField").val();
 		var field2 = $("#emailField").val();
 		var field3 = $("#addressField").val();
 		var field4 = $("#cinema option:selected").text();
 		var field5 = $("#question2").text();
+		var field18 = country;
+		var field19 = travelType;
 
-if(field1 == ""){
+if(field1 === ""){
 alert('Please Fill Your Name');
 document.getElementById("nameField").focus();
 return false;
 }
-if(field2 == ""){
+if(field2 === ""){
 alert('Please Fill Your Email');
 document.getElementById("emailField").focus();
 return false;
@@ -189,10 +191,10 @@ return false;
 // document.getElementById("mobField").focus();
 // return false;
 // }
-console.log(field1, field2)
+console.log(field1, field2, field19)
 		$.ajax({
 				url: "https://cors-anywhere.herokuapp.com/https://docs.google.com/forms/d/e/1FAIpQLSdB4pE_hSe9-ULeKFIe0DQ_hq82LD0rWxQiAHEfr4NAtN_o_g/formResponse?",
-				data: {"entry.1749773494": field0 + field1, "entry.2036775354": field2+field3, "entry.1701920475": field4, "entry.1960485680": field5},
+				data: {"entry.1749773494": field0 + field1, "entry.2036775354": field2+field3, "entry.1701920475": field4, "entry.1960485680": field5, "entry.98002090": field18, "entry.1890597124": field19},
 				type: "POST",
 				dataType: "xml",
 				success: function(d)

@@ -80,7 +80,7 @@ const Verification = () => {
 							placeholder='@example.com'
 							list='addresses'
 							name='address'
-							id='address'
+							id='addressField'
 							value={address}
 							required
 							onChange={(e) => onUserInputChange(e, 'address')}
