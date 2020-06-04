@@ -50,7 +50,7 @@ export const HighlightTextWrapper = styled.span`
 `;
 
 export const QuestionTitleWrapper = styled.div`
-	font-size: 21px;
+	font-size: 20px;
 	font-family: 'Jua', sans-serif;
 `;
 

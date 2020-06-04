@@ -32,10 +32,13 @@ const PageProvider = ({ children }) => {
 	// time string for ticket
 	const [date, setDate] = useState('');
 
+	const [disabled, setDisabled] = useState(false);
+
 	// called when the button is clicked
 	const setPageCount = () => {
+		setDisabled(true);
+		console.log(selectedChoices);
 		if (currentPage === 15) {
-			// console.log(selectedChoices);
 			getTravelType();
 			getCountry();
 			setCurrentDate(); // without form
@@ -43,7 +46,8 @@ const PageProvider = ({ children }) => {
 		}
 		setTimeout(() => {
 			setCurrentPage(currentPage + 1);
-		}, 100);
+			setDisabled(false);
+		}, 500);
 		// console.log(currentPage, isSelected);
 	};
 
@@ -230,6 +234,8 @@ const PageProvider = ({ children }) => {
 				travelType,
 				country,
 				postToGoogle,
+				disabled,
+				setDisabled,
 			}}>
 			{children}
 		</PageContext.Provider>
