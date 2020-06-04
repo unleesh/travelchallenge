@@ -2,6 +2,7 @@ import React, { useState, useReducer, useEffect } from 'react';
 import PageContext from '../../contexts/Page.context';
 import moment from 'moment';
 import { famousCountries } from '../../mockData';
+import $ from 'jquery';
 
 const PageProvider = ({ children }) => {
 	// Define state & setState with hook
@@ -10,9 +11,6 @@ const PageProvider = ({ children }) => {
 
 	// sets the language option.
 	const [lang, setLang] = useState('');
-
-	// // sets the color of button when it's clicked.
-	// const [btnColor, setBtnColor] = useState('rgba(29, 188, 165, 1)');
 
 	// sets user's countries list when country is clicked
 	const [selectedCountries, setSelectedCountries] = useState([]);
@@ -34,21 +32,10 @@ const PageProvider = ({ children }) => {
 	// time string for ticket
 	const [date, setDate] = useState('');
 
-	// result for user - img(cityText, countryText, homeFlag, countryFlag, landmark)
-	const [result, setResult] = useReducer(
-		(state, newState) => ({ ...state, ...newState }),
-		{
-			cityText: '',
-			countryText: '',
-			fromFlag: '',
-			toFlag: '',
-			landmark: '',
-		},
-	);
-
 	// called when the button is clicked
 	const setPageCount = () => {
 		if (currentPage === 15) {
+			// console.log(selectedChoices);
 			getTravelType();
 			getCountry();
 			setCurrentDate(); // without form
@@ -90,7 +77,7 @@ const PageProvider = ({ children }) => {
 			key = title;
 			newValue = value === 'None' ? '' : value;
 		}
-		console.log('key', key);
+		// console.log('key', key);
 		setUserInput({ [key]: newValue });
 	};
 
@@ -99,14 +86,9 @@ const PageProvider = ({ children }) => {
 		setDate(date);
 	};
 
-	/**
-	 *	1. selectedChoices 에 따른 성향 계산
-	 *  2. 랜덤한 나라 선택 Math.random()
-	 */
-	const updateResult = () => {};
-
 	const [travelType, setTravelType] = useState('');
 
+	// selectedChoices 에 따른 성향 계산
 	const getTravelType = () => {
 		const first = selectedChoices[0],
 			second = selectedChoices[3],
@@ -153,9 +135,10 @@ const PageProvider = ({ children }) => {
 		} else if (type === '0010') {
 			lang === 'KOR' ? setTravelType('뉴요커2') : setTravelType('city lover');
 		}
-		// console.log('travel Type :', travelType);
+		console.log('travel Type :', travelType);
 	};
 
+	// choose random country using Math.random()
 	const [country, setCountry] = useState('');
 
 	const getCountry = () => {
@@ -163,6 +146,66 @@ const PageProvider = ({ children }) => {
 		const max = famousCountries.length;
 		const randomNum = Math.floor(Math.random() * (max - min)) + min;
 		setCountry(famousCountries[randomNum].name);
+	};
+
+	// post data to google spreadsheet
+	const postToGoogle = () => {
+		const { title, username, email, address } = userInput;
+		const nameInput = `${title} ${username}`;
+		const emailInput = `${email}${address}`;
+		const [
+			q1,
+			q2,
+			q3,
+			q4,
+			q5,
+			q6,
+			q7,
+			q8,
+			q9,
+			q10,
+			q11,
+			q12,
+			q13,
+			q14,
+		] = selectedChoices;
+		const countryList = selectedCountries.sort().join(', ');
+
+		const data = {
+			'entry.1749773494': nameInput, // name
+			'entry.2036775354': emailInput, // email
+			'entry.1701920475': q1, // q1
+			'entry.1960485680': q2,
+			'entry.1014793409': q3,
+			'entry.1634717638': q4,
+			'entry.1393527517': q5,
+			'entry.365460716': q6,
+			'entry.1306754139': q7,
+			'entry.1321363432': q8,
+			'entry.1273095494': q9,
+			'entry.184882473': q10,
+			'entry.2034242815': q11,
+			'entry.1105226544': q12,
+			'entry.1255908949': q13,
+			'entry.619991625': q14,
+			'entry.1911455177': countryList, // selected countries
+			'entry.98002090': country, // country list
+			'entry.1890597124': travelType, // travel type
+		};
+
+		$.ajax({
+			url:
+				'https://cors-anywhere.herokuapp.com/https://docs.google.com/forms/d/e/1FAIpQLSdB4pE_hSe9-ULeKFIe0DQ_hq82LD0rWxQiAHEfr4NAtN_o_g/formResponse?',
+			data,
+			type: 'POST',
+			dataType: 'xml',
+			success: function (d) {},
+			error: function (x, y, z) {
+				$('#success-msg').show();
+				$('#form').hide();
+			},
+		});
+		return false;
 	};
 
 	useEffect(() => {
@@ -186,6 +229,7 @@ const PageProvider = ({ children }) => {
 				setCurrentDate,
 				travelType,
 				country,
+				postToGoogle,
 			}}>
 			{children}
 		</PageContext.Provider>
