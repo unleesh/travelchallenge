@@ -43,7 +43,7 @@ const PageProvider = ({ children }) => {
 		}
 		setTimeout(() => {
 			setCurrentPage(currentPage + 1);
-		}, 50);
+		}, 100);
 		// console.log(currentPage, isSelected);
 	};
 

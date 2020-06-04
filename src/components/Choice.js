@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import PageContext from '../contexts/Page.context';
 import styled from 'styled-components';
 import debounce from 'lodash.debounce';
@@ -11,7 +11,7 @@ const Choice = ({ choice, index }) => {
 		setChoiceColor('rgba(249, 180, 56, 1)');
 		addUserChoice(index);
 		setPageCount();
-	}, 100);
+	}, 500);
 	return (
 		<ChoiceWrapper choiceColor={choiceColor} onClick={onChoiceClick}>
 			{choice}
@@ -28,7 +28,7 @@ const ChoiceWrapper = styled.div`
 	border-left-width: 3.5px;
 	background-color: ${(props) => props.choiceColor || 'rgba(29, 188, 165, 1)'};
 	width: 100%;
-	padding: 10px 20px;
+	padding: 10px 15px;
 	font-size: 18px;
 `;
 

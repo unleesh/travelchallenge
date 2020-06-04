@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useContext } from 'react';
 import PageContext from '../contexts/Page.context';
 import styled from 'styled-components';
 import { mockData_KOR, mockData_ENG } from '../mockData';
