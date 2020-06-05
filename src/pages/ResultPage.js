@@ -3,6 +3,7 @@ import Result from '../components/Result';
 import TravelType from '../components/TravelType';
 import styled from 'styled-components';
 import PageContext from '../contexts/Page.context';
+import SocialButtons from '../components/SocialButtons';
 
 const ResultPage = () => {
 	const { travelType, lang } = useContext(PageContext);
@@ -10,6 +11,7 @@ const ResultPage = () => {
 		<ResultPageWrapper>
 			<Result />
 			<TravelType travelType={travelType} lang={lang} />
+			<SocialButtons />
 		</ResultPageWrapper>
 	);
 };
