@@ -5,6 +5,7 @@ import {
 	QuestionTitleWrapper,
 	QuestionTextWrapper,
 	VerificationTitleWrapper,
+	EmailInfoWrapper,
 } from './styles/StyleContainer';
 
 export const mockData_KOR = [
@@ -382,11 +383,22 @@ export const mockData_KOR = [
 		id: 16,
 		text: (
 			<>
-				<VerificationTitleWrapper>마지막 (가상)티켓 발권과</VerificationTitleWrapper>
-				<VerificationTitleWrapper>자신의 여행유형 확인을 위해</VerificationTitleWrapper>
 				<VerificationTitleWrapper>
-				아래를 입력해 주세요.
+					마지막 (가상)티켓 발권과
 				</VerificationTitleWrapper>
+				<VerificationTitleWrapper>
+					자신의 여행유형 확인을 위해
+				</VerificationTitleWrapper>
+				<VerificationTitleWrapper>
+					아래를 입력해 주세요.
+				</VerificationTitleWrapper>
+			</>
+		),
+		text2: (
+			<>
+				<EmailInfoWrapper>
+					혜택과 업데이트 소식을 위해 꼭 유효한 이메일을 입력해 주세요
+				</EmailInfoWrapper>
 			</>
 		),
 	},
@@ -751,11 +763,20 @@ export const mockData_ENG = [
 		id: 16,
 		text: (
 			<>
-				<VerificationTitleWrapper>Finally, to get your (virtual) first class ticket </VerificationTitleWrapper>
-				<VerificationTitleWrapper>and to find your travel type,</VerificationTitleWrapper>
 				<VerificationTitleWrapper>
-				Please fill below
+					Finally, to get your (virtual) first class ticket{' '}
 				</VerificationTitleWrapper>
+				<VerificationTitleWrapper>
+					and to find your travel type,
+				</VerificationTitleWrapper>
+				<VerificationTitleWrapper>Please fill below</VerificationTitleWrapper>
+			</>
+		),
+		text2: (
+			<>
+				<EmailInfoWrapper>
+					Pelase fill your valid email for benefits and updates
+				</EmailInfoWrapper>
 			</>
 		),
 	},
