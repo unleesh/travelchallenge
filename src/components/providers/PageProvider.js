@@ -1,4 +1,4 @@
-import React, { useState, useReducer, useEffect } from 'react';
+import React, { useState, useReducer } from 'react';
 import PageContext from '../../contexts/Page.context';
 import moment from 'moment';
 import { famousCountries } from '../../mockData';
@@ -37,7 +37,6 @@ const PageProvider = ({ children }) => {
 	// called when the button is clicked
 	const setPageCount = () => {
 		setDisabled(true);
-		console.log(selectedChoices);
 		if (currentPage === 15) {
 			getTravelType();
 			getCountry();
@@ -48,7 +47,6 @@ const PageProvider = ({ children }) => {
 			setCurrentPage(currentPage + 1);
 			setDisabled(false);
 		}, 500);
-		// console.log(currentPage, isSelected);
 	};
 
 	// Button color changes after the click on each choices
@@ -77,11 +75,9 @@ const PageProvider = ({ children }) => {
 			newValue = value;
 		} else {
 			// dropdown
-			console.log('e.target :', value);
 			key = title;
 			newValue = value === 'None' ? '' : value;
 		}
-		// console.log('key', key);
 		setUserInput({ [key]: newValue });
 	};
 
@@ -99,7 +95,6 @@ const PageProvider = ({ children }) => {
 			third = selectedChoices[8],
 			fourth = selectedChoices[13],
 			type = `${first}${second}${third}${fourth}`;
-		console.log('type :', type);
 		if (type === '1200' || type === '1100') {
 			lang === 'KOR' ? setTravelType('텐션몰빵') : setTravelType('energizer');
 		} else if (type === '1211') {
@@ -136,10 +131,11 @@ const PageProvider = ({ children }) => {
 			lang === 'KOR'
 				? setTravelType('프로파일러')
 				: setTravelType('perfectionist');
+		} else if (type === '0111') {
+			lang === 'KOR' ? setTravelType('사색형') : setTravelType('outsider');
 		} else if (type === '0010') {
 			lang === 'KOR' ? setTravelType('뉴요커2') : setTravelType('city lover');
 		}
-		console.log('travel Type :', travelType);
 	};
 
 	// choose random country using Math.random()
@@ -211,10 +207,6 @@ const PageProvider = ({ children }) => {
 		});
 		return false;
 	};
-
-	useEffect(() => {
-		console.log('마운트 될 때만 실행됩니다.');
-	}, []);
 
 	return (
 		<PageContext.Provider
