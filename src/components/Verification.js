@@ -26,7 +26,7 @@ const Verification = () => {
 		lang,
 	} = useContext(PageContext);
 	const { username, email, title, address } = userInput;
-	const { text } = lang === 'KOR' ? mockData_KOR[16] : mockData_ENG[16];
+	const { text, text2 } = lang === 'KOR' ? mockData_KOR[16] : mockData_ENG[16];
 
 	return (
 		<FormOuterWrapper>
@@ -92,6 +92,7 @@ const Verification = () => {
 						</datalist>
 					</SelectWrapper>
 				</label>
+				{text2}
 				<Input type='submit' value='submit' />
 			</form>
 		</FormOuterWrapper>
