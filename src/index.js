@@ -4,6 +4,7 @@ import { createGlobalStyle } from 'styled-components';
 import App from './App';
 import './styles/global.css';
 import AxiaStencilLight from './styles/fonts/axia-stencil-light/AxiaStencilLight.otf';
+import * as Sentry from '@sentry/browser';
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -23,6 +24,10 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+Sentry.init({
+	dsn:
+		'https://1ab2dd6d33c842b0a85ca08664f059fe@o403093.ingest.sentry.io/5265231',
+});
 ReactDOM.render(
 	<React.StrictMode>
 		<GlobalStyle />
