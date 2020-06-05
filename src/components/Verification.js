@@ -35,7 +35,7 @@ const Verification = () => {
 					e.preventDefault();
 					setCurrentDate();
 					setPageCount();
-					// postToGoogle();
+					postToGoogle();
 				}}>
 				<TitleWrapper>{text}</TitleWrapper>
 				<TextWrapper>Passenger</TextWrapper>
