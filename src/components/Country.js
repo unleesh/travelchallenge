@@ -9,7 +9,6 @@ const Country = ({ name, abvName }) => {
 	const { setCountryList } = useContext(PageContext);
 	// calls when country is clicked.
 	const selectCountry = useCallback(() => {
-		console.log(isSelected);
 		setCountryList(isSelected, name);
 		if (!isSelected) {
 			setIsSelected(true);
@@ -17,7 +16,6 @@ const Country = ({ name, abvName }) => {
 			setIsSelected(false);
 		}
 	}, [isSelected, name, setCountryList]);
-	// console.log(isSelected, abvName);
 	return (
 		<OuterImgWrapper onClick={selectCountry} isSelected={isSelected}>
 			<ImgWrapper src={require(`../Imgs/Countries/${name}.png`)} alt='' />
