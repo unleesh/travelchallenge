@@ -4,7 +4,7 @@ import IntroPage from './IntroPage';
 import StartPage from './StartPage';
 import QuestionsPage from './QuestionsPage';
 import VerificationPage from './VerificationPage';
-import ResultLoadingPage from './ResultLoadingPage';
+
 import ResultPage from './ResultPage';
 
 const PageController = () => {
@@ -16,13 +16,7 @@ const PageController = () => {
 	} else if (currentPage === 16) {
 		return <VerificationPage />;
 	} else if (currentPage === 17) {
-		// } else if (currentPage === 15) {
-		return (
-			<>
-				{/* <ResultLoadingPage /> */}
-				<ResultPage />
-			</>
-		);
+		return <ResultPage />;
 	}
 	return <QuestionsPage />;
 };
