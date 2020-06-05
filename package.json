@@ -37,6 +37,9 @@
   },
   "devDependencies": {
     "jquery": "^3.5.1",
+    "react-share": "^4.1.0",
+    "react-share-kakao": "^0.0.5",
+    "react-social": "^1.10.0",
     "styled-components": "^5.1.0"
   }
 }
