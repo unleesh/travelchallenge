@@ -134,7 +134,7 @@ const PageProvider = ({ children }) => {
 		} else if (type === '0111') {
 			lang === 'KOR' ? setTravelType('사색형') : setTravelType('outsider');
 		} else if (type === '0010') {
-			lang === 'KOR' ? setTravelType('뉴요커2') : setTravelType('city lover');
+			lang === 'KOR' ? setTravelType('뉴요커') : setTravelType('city lover');
 		}
 	};
 
