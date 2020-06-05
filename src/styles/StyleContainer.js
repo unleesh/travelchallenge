@@ -62,3 +62,9 @@ export const VerificationTitleWrapper = styled.div`
 export const QuestionTextWrapper = styled.div`
 	font-size: 18px;
 `;
+
+export const EmailInfoWrapper = styled.div`
+	font-size: 12px;
+	font-family: 'Jua', sans-serif;
+	margin-top: 10px;
+`;
