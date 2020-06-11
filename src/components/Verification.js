@@ -62,7 +62,7 @@ const Verification = () => {
 						onChange={onUserInputChange}
 					/>
 				</SelectWrapper>
-				<label>
+				{/* <label>
 					<TextWrapper>E-mail</TextWrapper>
 					<SelectWrapper>
 						<InputWrapper
@@ -92,7 +92,7 @@ const Verification = () => {
 						</datalist>
 					</SelectWrapper>
 				</label>
-				{text2}
+				{text2} */}
 				<Input type='submit' value='submit' />
 			</form>
 		</FormOuterWrapper>

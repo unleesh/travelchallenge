@@ -129,19 +129,19 @@
 		</script>
 		<div class="scroll-size">
 			<div class="ad_top">
-				<ins class="kakao_ad_area" style="display:none;" 
+				<ins class="kakao_ad_area_top" style="display:none;" 
 				data-ad-unit    = "DAN-toamci420do0" 
 				data-ad-width   = "320" 
 				data-ad-height  = "50"></ins> 
 				<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
 			</div>
-			<div class="ad_bottom">	
-				<ins class="kakao_ad_area" style="display:none;" 
+			<!-- <div class="ad_bottom">	
+				<ins class="kakao_ad_area_bottom" style="display:none;" 
 				data-ad-unit    = "DAN-1k1zjd2wx0tib" 
 				data-ad-width   = "320" 
 				data-ad-height  = "50"></ins> 
 				<script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
-			</div>
+			</div> -->
 		</div>
 		<noscript>You need to enable JavaScript to run this app.</noscript>
 		<div id="root"></div>
@@ -155,9 +155,10 @@
 	<style>
 		.footer-wrapper {
 			width: 600px;
-			margin: 0 auto;
+			margin-top: 10px;
+			padding-top: 50px;
 			position: fixed;
-			bottom: 0;
+			bottom: 10px;
 			left: 20px;
 		}
 		.foot {
@@ -169,31 +170,46 @@
 			margin: 0 auto;
 		}
 		.ad_bottom {
-		width: 320px;
-		margin: 60px auto;
-		position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+			width: 320px;
+			height: 50px;
+			margin: 0 auto;
+			position: absolute;
+			bottom: 0px;
+			left: 40%;
 		}
 		@media(max-width:800px){
 			.scroll-size {
-			height: 700px;
+				height: 400px;
 			}
-			.kakao_ad_area_top {
+			/* .kakao_ad_area_top {
 				position: fixed;
 				bottom: 0px;
 				left:0;
 				right:0;
 				padding: 10px 0px 50px 0px;
-			}
-			.kakao_ad_area_bottom {
-				position: float;
-				padding: 10px 0px 50px 0px;
+			} */
+			/* .kakao_ad_area_bottom {
+				height: 50px;
+				width: 320px;
+				position: absolute;
 				bottom: 0px;
 				left:0;
 				right:0;
+				padding: 10px 0px 10px 0px;
+			} */
+			.ad_top {
+				width: 320px;
+				margin: 0 auto;
 			}
+			/* .footer-wrapper {
+				width: 600px;
+				margin-top: 10px;
+				padding-top: 50px;
+				position: absolute;
+				overflow: hidden;
+				bottom: -40px;
+				left: 20px;
+			} */
 		}
 	</style>
 </html>

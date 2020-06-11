@@ -26,7 +26,8 @@ export const CardContainer = styled.div`
 	justify-content: center;
 	overflow-y: scroll;
 	@media (max-width: 500px) {
-		margin: 60px auto 100px auto;
+		margin: 60px auto 200px auto;
+		padding-bottom: 120px auto;
 	}
 `;
 
