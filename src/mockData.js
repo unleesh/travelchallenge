@@ -390,7 +390,7 @@ export const mockData_KOR = [
 					자신의 여행유형 확인을 위해
 				</VerificationTitleWrapper>
 				<VerificationTitleWrapper>
-					아래를 입력해 주세요.
+					아래 성함을 입력해 주세요.
 				</VerificationTitleWrapper>
 			</>
 		),
@@ -769,7 +769,7 @@ export const mockData_ENG = [
 				<VerificationTitleWrapper>
 					and to find your travel type,
 				</VerificationTitleWrapper>
-				<VerificationTitleWrapper>Please fill below</VerificationTitleWrapper>
+				<VerificationTitleWrapper>Please fill your name below</VerificationTitleWrapper>
 			</>
 		),
 		text2: (
