@@ -195,10 +195,14 @@ const PageProvider = ({ children }) => {
 
 		$.ajax({
 			url:
-				'https://cors-anywhere.herokuapp.com/https://docs.google.com/forms/d/e/1FAIpQLSdB4pE_hSe9-ULeKFIe0DQ_hq82LD0rWxQiAHEfr4NAtN_o_g/formResponse?',
+				'https://cors.bridged.cc/https://docs.google.com/forms/d/e/1FAIpQLSdB4pE_hSe9-ULeKFIe0DQ_hq82LD0rWxQiAHEfr4NAtN_o_g/formResponse?',
+			headers: {
+					'x-cors-grida-api-key': 'cf009813-58ed-46f1-a679-e65035e1d4f1'
+				  },
 			data,
 			type: 'POST',
 			dataType: 'xml',
+			processData: true,
 			success: function (d) {},
 			error: function (x, y, z) {
 				$('#success-msg').show();
