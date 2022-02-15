@@ -13,12 +13,18 @@ const TravelType = ({ lang, travelType }) => {
 				alt=''
 			/>
 			<TypeTextImgWrapper src={travelType_lang} alt='' />
-			<a href='https://www.facebook.com/travelmondayofficial' target='blank'>
+				<a href='https://test1.promxr.com' target='blank'>
+					<PromTestLinkImgWrapper
+					src={require(`../Imgs/ticket_icons/promTestLink.png`)}
+					alt=''
+					/>
+				</a>
+			{/* <a href='https://www.facebook.com/travelmondayofficial' target='blank'>
 				<StampImgWrapper
 					src={require(`../Imgs/ticket_icons/stamp.png`)}
 					alt=''
 				/>
-			</a>
+			</a> */}
 		</TravelTypeWrapper>
 	);
 };
@@ -55,5 +61,14 @@ const StampImgWrapper = styled.img`
 	bottom: 2%;
 	right: 6%;
 `;
+const PromTestLinkImgWrapper = styled.img`
+	display: flex;
+	z-index: 1;
+	position: absolute;
+	width: 40%;
+	bottom: 7%;
+	right: 6%;
+`;
+
 
 export default TravelType;
