@@ -150,4 +150,21 @@ const LandmarkImgWrapper = styled.img`
 	margin-bottom: 2%;
 `;
 
+const PromOuterWrapper = styled.div`
+	display: flex;
+	align-self: center;
+	position: absolute;
+	z-index: 1;
+	padding-bottom: 10%;
+	justify-content: flex-end;
+`;
+
+const PromImgWrapper = styled.img`
+	display: flex;
+	width: 20%;
+	height: 20%;
+	margin-right: 18px;
+	margin-bottom: 2%;
+`;
+
 export default Result;

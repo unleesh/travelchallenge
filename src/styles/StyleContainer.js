@@ -31,6 +31,33 @@ export const CardContainer = styled.div`
 	}
 `;
 
+export const BannerContainer = styled.div`
+	position: absolute;
+	width: 200px;
+	height: 70px;
+	margin: auto;
+	top: 80%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	align-self: center;
+	overflow: visible;
+	border-radius: 0px;
+	box-shadow: 7px 7px 10px #222;
+	background-color: rgba(129, 188, 165, 1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@media (max-width: 400px) {
+		margin: 10px auto 100px auto;
+		padding-bottom: 120px auto;
+	}
+	@media (max-width: 375px) {
+		margin: 120px auto 100px auto;
+		padding-bottom: 120px auto;
+	}
+`;
+
 export const TextWrapper = styled.div`
 	font-family: 'Jua', sans-serif;
 	font-size: 12px;

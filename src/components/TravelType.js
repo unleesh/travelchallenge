@@ -53,12 +53,12 @@ const TypeTextImgWrapper = styled.img`
 	bottom: 120px;
 `;
 
-const StampImgWrapper = styled.img`
+const BannerWrapper = styled.img`
 	display: flex;
 	z-index: 1;
 	position: absolute;
 	width: 20%;
-	bottom: 2%;
+	bottom: 0%;
 	right: 6%;
 `;
 const PromTestLinkImgWrapper = styled.img`
@@ -67,6 +67,15 @@ const PromTestLinkImgWrapper = styled.img`
 	position: absolute;
 	width: 40%;
 	bottom: 7%;
+	right: 6%;
+`;
+
+const GhibriTestLinkImgWrapper = styled.img`
+	display: flex;
+	z-index: 1;
+	position: absolute;
+	width: 40%;
+	bottom: -10%;
 	right: 6%;
 `;
 
