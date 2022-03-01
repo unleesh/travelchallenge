@@ -49,7 +49,7 @@ export const BannerContainer = styled.div`
 	align-items: center;
 	justify-content: center;
 	@media (max-width: 400px) {
-		margin: 10px auto 100px auto;
+		margin: 80px auto 100px auto;
 		padding-bottom: 120px auto;
 	}
 	@media (max-width: 375px) {
