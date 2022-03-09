@@ -13,8 +13,8 @@ function App() {
 				</PageProvider>
 			</CardContainer>
 			<BannerContainer>
-				<a href='https://ghibritest.promxr.com' target='blank'>
-					<GhibriTestLinkImgWrapper
+				<a href='https://ghiblitest.promxr.com' target='blank'>
+					<GhibliTestLinkImgWrapper
 					src={require(`../src/Imgs/ghibrimeta.png`)}
 					alt=''
 					/>
@@ -24,7 +24,7 @@ function App() {
 	);
 }
 
-const GhibriTestLinkImgWrapper = styled.img`
+const GhibliTestLinkImgWrapper = styled.img`
 	display: flex;
 	z-index: 1;
 	position: absolute;

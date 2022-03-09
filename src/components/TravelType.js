@@ -70,7 +70,7 @@ const PromTestLinkImgWrapper = styled.img`
 	right: 6%;
 `;
 
-const GhibriTestLinkImgWrapper = styled.img`
+const GhibliTestLinkImgWrapper = styled.img`
 	display: flex;
 	z-index: 1;
 	position: absolute;
