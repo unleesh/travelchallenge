@@ -35,8 +35,8 @@ const GhibliTestLinkImgWrapper = styled.img`
 	z-index: 1;
 	position: absolute;
 	width: 100%;
-	bottom: -20%;
-	right: 0%;
+	//bottom: -20%;
+	right: 50%;
 	align-items: center;
 	box-shadow: 7px 7px 10px #222;
 `;
@@ -46,8 +46,8 @@ const BannerLinkImgWrapper = styled.img`
 	z-index: 1;
 	position: absolute;
 	width: 100%;
-	bottom: -200%;
-	right: 0%;
+	//bottom: -200%;
+	right: -50%;
 	align-items: center;
 	box-shadow: 7px 7px 10px #222;
 `;
