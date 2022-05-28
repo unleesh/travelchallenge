@@ -43,8 +43,8 @@ export const BannerContainer = styled.div`
 	align-self: center;
 	overflow: visible;
 	border-radius: 0px;
-	box-shadow: 7px 7px 10px #222;
-	background-color: rgba(129, 188, 165, 1);
+	//box-shadow: 7px 7px 10px #222;
+	//background-color: rgba(129, 188, 165, 1);
 	display: flex;
 	align-items: center;
 	justify-content: center;

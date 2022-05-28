@@ -19,6 +19,12 @@ function App() {
 					alt=''
 					/>
 				</a>
+				<a href='https://ghiblitest.promxr.com' target='blank'>
+					<BannerLinkImgWrapper
+					src={require(`../src/Imgs/Banner.png`)}
+					alt=''
+					/>
+				</a>
 			</BannerContainer>
 		</AppContainer>
 	);
@@ -32,6 +38,18 @@ const GhibliTestLinkImgWrapper = styled.img`
 	bottom: -20%;
 	right: 0%;
 	align-items: center;
+	box-shadow: 7px 7px 10px #222;
+`;
+
+const BannerLinkImgWrapper = styled.img`
+	display: flex;
+	z-index: 1;
+	position: absolute;
+	width: 100%;
+	bottom: -200%;
+	right: 0%;
+	align-items: center;
+	box-shadow: 7px 7px 10px #222;
 `;
 
 export default App;
