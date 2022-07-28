@@ -19,7 +19,7 @@ function App() {
 					alt=''
 					/>
 				</a>
-				<a href='https://ghiblitest.promxr.com' target='blank'>
+				<a href='https://smartstore.naver.com/travelmonday/products/6962321414' target='blank'>
 					<BannerLinkImgWrapper
 					src={require(`../src/Imgs/Banner.png`)}
 					alt=''
